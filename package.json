@@ -1,5 +1,5 @@
 {
-  "name": "risk-blog",
+  "name": "Zeeguros-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,6 +25,11 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

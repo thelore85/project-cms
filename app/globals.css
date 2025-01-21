@@ -8,15 +8,15 @@ body {
 
 @layer base {
   :root {
-    --background: hsl(0, 0%, 100%);
+    --background: hsl(0, 0%, 85%);
     --foreground: hsl(240, 10%, 3.9%);
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(240, 10%, 3.9%);
     --popover: hsl(0, 0%, 100%);
     --popover-foreground: hsl(240, 10%, 3.9%);
-    --primary: hsl(240, 5.9%, 10%);
+    --primary: hsl(255, 72%, 18%);
     --primary-foreground: hsl(0, 0%, 98%);
-    --secondary: hsl(240, 4.8%, 95.9%);
+    --secondary: hsl(300, 78%, 66%);
     --secondary-foreground: hsl(240, 5.9%, 10%);
     --muted: hsl(240, 4.8%, 95.9%);
     --muted-foreground: hsl(240, 3.8%, 46.1%);
@@ -32,7 +32,7 @@ body {
     --chart-3: hsl(197, 37%, 24%);
     --chart-4: hsl(43, 74%, 66%);
     --chart-5: hsl(27, 87%, 67%);
-    --radius: hsl(0.5rem);
+    --radius: 0.5rem;
   }
   .dark {
     --background: hsl(240, 10%, 3.9%);
