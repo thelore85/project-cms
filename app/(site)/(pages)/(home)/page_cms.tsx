@@ -1,7 +1,7 @@
 import {getPage} from '@/sanity/sanity-utils'
 import {getBurgerMenu} from '@/sanity/sanity-utils'
 import Link from 'next/link'
-import BurgerMenu from './components/BurgerMenu'
+import BurgerMenu from '@/app/components/navigations/BurgerMenu_cms'
 
 export default async function Home() {
   const page = await getPage()
