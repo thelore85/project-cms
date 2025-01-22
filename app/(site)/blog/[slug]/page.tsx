@@ -43,7 +43,7 @@ export default async function BlogPostPage() {
           </div>
         )}
 
-        <p className="text-sm text-gray-500 my-2">Published on {new Date(_createdAt).toLocaleDateString()}</p>
+        {/* <p className="text-sm text-gray-500 my-2">Published on {new Date(_createdAt).toLocaleDateString()}</p> */}
 
         <div className="mt-6 text-gray-700 leading-relaxed">
           <PortableText value={body} />
