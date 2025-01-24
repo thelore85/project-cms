@@ -24,6 +24,9 @@ export default function Footer({}: Props) {
             <Link href="/blog" className="block">
               Blog
             </Link>
+            <Link href="/admin" className="block">
+              Admin
+            </Link>
           </div>
           <div className="p-10 bg-slate-700 w-1/3">About</div>
         </div>
