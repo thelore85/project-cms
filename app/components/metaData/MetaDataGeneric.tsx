@@ -6,7 +6,7 @@ export default async function MetaTagsGeneric({}: Props) {
   return (
     <>
       {/* PAGE META TAG */}
-      <title>Zeeguros | tu seguro haz Zee!</title>
+      <title>Zeeguros | Tu seguro haz Zee!</title>
       <meta name="description" content="Las mejores ofertas de seguros, con unos pocos clicks" />
       <meta name="keywords" content={'seguro'} />
       <meta name="author" content="Zeeguros" />
