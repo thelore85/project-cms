@@ -1,4 +1,4 @@
-import {Geist, Geist_Mono, Inter} from 'next/font/google'
+import {Geist, Geist_Mono, Inter, Noticia_Text, Poppins} from 'next/font/google'
 import '../globals.css'
 
 // const geistSans = Geist({
@@ -11,7 +11,22 @@ import '../globals.css'
 //   subsets: ['latin'],
 // })
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const noticiaText = Noticia_Text({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-noticia-text',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+})
 
 // import type {Metadata} from 'next'
 
@@ -26,8 +41,8 @@ type Props = {
 
 export default function RootLayout({children}: Props) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="es" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
+      <body>{children}</body>
     </html>
   )
 }
