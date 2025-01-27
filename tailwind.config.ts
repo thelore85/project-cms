@@ -52,6 +52,12 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        flat: '0px 4px 0px', // Ombra flat con colore nero
+      },
+      fontFamily: {
+        noticia: ['var(--font-noticia-text)'], // Usa la variabile CSS
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
