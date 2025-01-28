@@ -1,5 +1,4 @@
 import MetaDataGeneric from '@/app/components/metaData/MetaDataGeneric'
-import MenuDesk from '@/app/components/navigations/MenuDesk'
 import Navigator from '@/app/components/navigations/Navigator'
 import Faq from '@/app/components/sections/Faq'
 import Footer from '@/app/components/sections/FooterStandard'
