@@ -14,7 +14,7 @@ export default function HeroBig({}: Props) {
               <p className="text-3xl text-primary-foreground mb-10">Mejora de precio o condiciones, con un seguro 100% personalizado</p>
               <CtaMain />
             </div>
-            <Image src="/img/components/hero/hero_img.png" alt="hero image" className="w-[500px] h-[500px] object-contain" width={500} height={500} />
+            <Image src="/img/components/hero/hero_img.png" alt="hero image" className="w-[500px] h-[500px] object-contain hidden lg:block" width={500} height={500} />
           </div>
         </div>
       </div>
