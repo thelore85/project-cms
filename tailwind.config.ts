@@ -22,6 +22,7 @@ export default {
         },
         secondary: {
           DEFAULT: 'var(--secondary)',
+          light: 'var(--secondary-light)',
           foreground: 'var(--secondary-foreground)',
         },
         muted: {
