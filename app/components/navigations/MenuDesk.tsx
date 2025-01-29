@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import LogoBlack from './LogoBlack'
 
 type Props = {}
 
@@ -9,8 +10,8 @@ export default function MenuDesk({}: Props) {
     <div className="container hidden lg:block">
       <nav className="flex items-center justify-between bg-white rounded-full border-2 border-black shadow-flat px-8 py-4 font-bold font-noticia">
         <div className="flex items-center w-3/5 justify-between">
-          <Image className="w-auto h-[40px]" src="/img/components/navigation/logoBlack.png" alt="ZeeGuros" width={'240'} height={'60'} />
-          <Link href="#howTo" className="hover:text-primary">
+          <LogoBlack />
+          <Link href="/#howTo" className="hover:text-primary">
             <span>Sobre Nosotros</span>
           </Link>
           <Link href="#testimonials" className="hover:text-primary">

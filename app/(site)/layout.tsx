@@ -1,15 +1,10 @@
-import {Geist, Geist_Mono, Inter, Noticia_Text, Poppins} from 'next/font/google'
+import {Noticia_Text, Poppins} from 'next/font/google'
 import '../globals.css'
 
 // Comonents
-import ScrollToTop from '@/app/components/utility/ScrollToTop'
 import Navigator from '../components/navigations/Navigator'
 import Footer from '../components/sections/FooterStandard'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+import ScrollToTop from '../components/utility/ScrollToTop'
 
 const noticiaText = Noticia_Text({
   subsets: ['latin'],
@@ -31,7 +26,7 @@ export default function RootLayout({children}: Props) {
   return (
     <html lang="es" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
       <body>
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Navigator />
         {children}
         <Footer />
