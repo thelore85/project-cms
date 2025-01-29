@@ -1,7 +1,5 @@
 import MetaDataGeneric from '@/app/components/metaData/MetaDataGeneric'
-import Navigator from '@/app/components/navigations/Navigator'
 import Faq from '@/app/components/sections/Faq'
-import Footer from '@/app/components/sections/FooterStandard'
 import HeroBig from '@/app/components/sections/HeroBig'
 import HowTo from '@/app/components/sections/HowTo'
 import Partners from '@/app/components/sections/Partners'
@@ -14,14 +12,12 @@ export default async function Home() {
       <MetaDataGeneric />
       <div className="min-h-screen ">
         <main className="">
-          <Navigator />
           <HeroBig />
           <ValueProposition />
           <HowTo />
           <Partners />
           <Testimonials />
           <Faq />
-          <Footer />
         </main>
       </div>
     </>
