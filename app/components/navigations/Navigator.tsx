@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Navigator({}: Props) {
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <MenuDesk />
       <MenuMobile />
     </div>
