@@ -1,7 +1,7 @@
 'use client'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import LogoBlack from './LogoBlack'
+import LogoBlack from './broker/LogoBlackBroker'
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'

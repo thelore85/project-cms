@@ -1,4 +1,4 @@
-import Footer from '@/app/components/sections/FooterStandard'
+import Footer from '@/app/components/sections/retail/FooterRetail'
 import PostFeed from '@/app/components/blog/PostFeed'
 import PageTitle from '@/app/components/sections/PageTitle'
 

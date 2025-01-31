@@ -1,4 +1,4 @@
-import FooterStandard from '@/app/components/sections/FooterStandard'
+import FooterStandard from '@/app/components/sections/retail/FooterRetail'
 import FreeText from '@/app/components/sections/FreeText'
 import PageTitle from '@/app/components/sections/PageTitle'
 

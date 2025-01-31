@@ -1,11 +1,11 @@
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '../ui/accordion'
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '../../ui/accordion'
 import React from 'react'
-import {Button} from '../ui/button'
-import CtaMain from '../buttons/CtaMain'
+import {Button} from '../../ui/button'
+import CtaMain from '../../buttons/CtaMain'
 
 type Props = {}
 
-export default function Faq({}: Props) {
+export default function FaqRetail({}: Props) {
   return (
     <section id="faq" className="bg-background py-10 ">
       <div className="container">

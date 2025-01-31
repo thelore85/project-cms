@@ -2,8 +2,6 @@ import {Noticia_Text, Poppins} from 'next/font/google'
 import '../globals.css'
 
 // Comonents
-import Navigator from '../components/navigations/Navigator'
-import Footer from '../components/sections/FooterStandard'
 import ScrollToTop from '../components/utility/ScrollToTop'
 
 const noticiaText = Noticia_Text({
@@ -27,9 +25,7 @@ export default function RootLayout({children}: Props) {
     <html lang="es" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
       <body>
         <ScrollToTop />
-        <Navigator />
         {children}
-        <Footer />
       </body>
     </html>
   )

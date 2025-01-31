@@ -6,7 +6,7 @@ import React from 'react'
 
 type Props = {}
 
-export default function Footer({}: Props) {
+export default function FooterBroker({}: Props) {
   return (
     <section id="footer" className="bg-foreground py-32 text-white">
       <div className="container">
@@ -23,14 +23,6 @@ export default function Footer({}: Props) {
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
               info@zeeguros.com
             </Link>
-            <Link href="/" className="block mb-5">
-              <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
-              workwithus@zeeguros.com
-            </Link>
-            <Link href="/" className="block mb-5">
-              <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
-              marketing@zeeguros.com
-            </Link>
             <span className="block mb-5 small">
               <FontAwesomeIcon icon={faLocationDot} className="w-5 h-5 inline-block me-3" />
               Calle Valencia 1 - Valencia
@@ -38,17 +30,11 @@ export default function Footer({}: Props) {
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Pages</p>
-            <Link href="/" className="block mb-5">
+            <Link href="/broker" className="block mb-5">
               Homepage
             </Link>
             <Link href="/legal" className="block mb-5">
               Terms and Conditions
-            </Link>
-            <Link href="/blog" className="block mb-5">
-              Blog
-            </Link>
-            <Link href="/admin" className="block mb-5">
-              Admin
             </Link>
           </div>
         </div>
