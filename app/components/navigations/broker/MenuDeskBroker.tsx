@@ -8,10 +8,16 @@ export default function MenuDeskBroker({}: Props) {
   return (
     <div className="container hidden lg:block">
       <nav className="flex items-center justify-between bg-white rounded-full border-2 border-black shadow-flat px-8 py-4 font-bold font-noticia">
-        <div className="flex items-center w-3/5 justify-between">
+        <div className="flex items-center w-3/5 justify-left gap-10">
           <LogoBlackBroker />
           <Link href="/broker/#valueProposition" className="hover:text-primary">
             <span>Sobre Nosotros</span>
+          </Link>
+          <Link href="/broker/#testimonials" className="hover:text-primary">
+            <span>Opiniones</span>
+          </Link>
+          <Link href="/broker/#faq" className="hover:text-primary">
+            <span>Faq</span>
           </Link>
         </div>
         <div className="">

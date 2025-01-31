@@ -7,12 +7,10 @@ type Props = {
 
 export default function PageTitle({title, description}: Props) {
   return (
-    <section className="bg-cover bg-center" style={{backgroundImage: `url('/img/components/hero/bg.jpg')`}}>
-      <div className=" container text-gray-900 py-20">
-        <div className="">
-          <h1 className="text-6xl font-bold mb-4">{title || 'No title yet'}</h1>
-          <p className="text-xl mb-6">{description || 'No description insert for this title page componet'}</p>
-        </div>
+    <section className="bg-primary text-primary-foreground mb-16">
+      <div className=" container py-20">
+        <h1 className="text-6xl font-bold mb-4">{title || 'No title yet'}</h1>
+        <p className="text-xl">{description || 'No description insert for this title page componet'}</p>
       </div>
     </section>
   )
