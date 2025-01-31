@@ -9,7 +9,7 @@ export default function HowTo({}: Props) {
         {/* ROW 1  */}
         <div className="lg:flex justify-center items-center gap-4 lg:mb-8">
           {/* TITLE  */}
-          <div className="mb-16 w-auto lg:max-w-[500px] mb-10 lg:mb-0">
+          <div className="mb-16 w-auto lg:max-w-[500px] lg:mb-0">
             <h2 className="text-center w-auto font-bold text-6xl">¿Y cómo lo hacemos?</h2>
           </div>
           {/* CARD  */}
