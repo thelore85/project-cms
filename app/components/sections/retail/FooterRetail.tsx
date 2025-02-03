@@ -61,7 +61,7 @@ export default function FooterRetail({}: Props) {
             <FontAwesomeIcon icon={faInstagram} className="w-[30px] h-[30px]" />
           </div>
           <div>
-            <p className="text-center small">© 2024 Zeeguros </p>
+            <p className="text-center small">© 2025 Zeeguros </p>
           </div>
         </div>
       </div>
