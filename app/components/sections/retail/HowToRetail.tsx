@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 type Props = {}
 
-export default function HowTo({}: Props) {
+export default function HowToRetaiil({}: Props) {
   return (
     <section id="howTo" className="bg-background mb-20">
       <div className="container">

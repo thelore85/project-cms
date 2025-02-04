@@ -23,17 +23,31 @@ export async function getPosts() {
   return posts
 }
 
-export async function getPost() {
+export async function getPost(slug: string) {
+  console.log(slug)
   return await client.fetch(
-    groq`*[_type == "post"][0]{
+    groq`*[_type == "post" && slug.current == $slug][0]{
       title,
       _createdAt,
       body,
       mainImage { asset -> { url }, alt },
       "slug": slug.current
     }`,
+    {slug},
   )
 }
+
+// export async function getPost() {
+//   return await client.fetch(
+//     groq`*[_type == "post"][0]{
+//       title,
+//       _createdAt,
+//       body,
+//       mainImage { asset -> { url }, alt },
+//       "slug": slug.current
+//     }`,
+//   )
+// }
 
 export async function getPage() {
   return await client.fetch(

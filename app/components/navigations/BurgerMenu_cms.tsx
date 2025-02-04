@@ -24,7 +24,6 @@ export default async function BurgerMenu({}: Props) {
         <nav>
           {menu?.links?.map(({link}: any) => (
             <div className="text-gray-900 me-2 text-lg font-bold">
-              {/* {console.log('//////// link: ', link)} */}
               <Link href={link.slug} className="text-gray-900 me-2 text-lg font-bold z-100">
                 {link.lable}
               </Link>

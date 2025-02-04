@@ -6,7 +6,7 @@ import React from 'react'
 
 type Props = {}
 
-export default function Footer({}: Props) {
+export default function FooterRetail({}: Props) {
   return (
     <section id="footer" className="bg-foreground py-32 text-white">
       <div className="container">
@@ -61,7 +61,7 @@ export default function Footer({}: Props) {
             <FontAwesomeIcon icon={faInstagram} className="w-[30px] h-[30px]" />
           </div>
           <div>
-            <p className="text-center small">© 2024 Zeeguros </p>
+            <p className="text-center small">© 2025 Zeeguros </p>
           </div>
         </div>
       </div>

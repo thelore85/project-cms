@@ -7,7 +7,7 @@ type Props = {}
 
 export default function ScrollToTop({}: Props) {
   const pathname = usePathname()
-  console.log('/// pathname: ', pathname)
+  // console.log('/// pathname: ', pathname)
 
   useEffect(() => {
     const handleScrollToHash = () => {

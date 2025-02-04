@@ -3,7 +3,7 @@ import React from 'react'
 
 type Props = {}
 
-export default function Partners({}: Props) {
+export default function PartnersBanner({}: Props) {
   return (
     <section className="bg-primary py-10">
       <div className="flex gap-10 justify-between overflow-x-scroll overflow-hidden py-10">
