@@ -9,7 +9,7 @@ export default function MenuDesk({}: Props) {
   return (
     <div className="container hidden lg:block">
       <nav className="flex items-center justify-between bg-white rounded-full border-2 border-black shadow-flat px-8 py-4 font-bold font-noticia">
-        <div className="flex items-center w-3/5 justify-between">
+        <div className="flex items-center w-3/5 justify-left gap-10">
           <LogoBlackRetail />
           <Link href="/es/#howTo" className="hover:text-primary">
             <span>Sobre Nosotros</span>
@@ -22,6 +22,9 @@ export default function MenuDesk({}: Props) {
           </Link>
           <Link href="/es/#footer" className="hover:text-primary">
             <span>Contacto</span>
+          </Link>
+          <Link href="/es/blog" className="hover:text-primary">
+            <span>Blog</span>
           </Link>
         </div>
         <div className="">

@@ -9,9 +9,24 @@ const client = createClient({
   useCdn: true, // Usa la CDN per query più veloci in ambienti di produzione
 })
 
-export async function getLocalPosts() {
-  const posts = await client.fetch(
-    groq`*[_type == "post" && language == 'es']{
+type PostProps = {
+  _id: string
+  _createdAt: string
+  title: string
+  body: any // Puoi migliorare questa tipizzazione se conosci la struttura precisa del body
+  mainImage: {
+    asset: {
+      url: string
+    }
+    alt?: string
+  }
+  slug: string
+  _translations?: []
+}
+
+export async function getLocalPosts(lang: string) {
+  const posts: PostProps = await client.fetch(
+    groq`*[_type == "post" && language == $lang]{
       _id,
       _createdAt,
       title,
@@ -24,6 +39,7 @@ export async function getLocalPosts() {
         "language": language
       }
     }`,
+    {lang},
   )
   return posts
 }

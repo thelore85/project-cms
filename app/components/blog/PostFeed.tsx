@@ -1,18 +1,35 @@
-import {getPosts, getLocalPosts} from '@/sanity/sanity-utils'
-import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
+'use client'
+
+import {getLocalPosts} from '@/sanity/sanity-utils'
+import useStore from '@/store/store'
+import {faArrowRight, faSpinner} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {PortableText} from '@portabletext/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import {useEffect, useState} from 'react'
 
-type Props = {}
+export default function PostFeed() {
+  const {lang} = useStore()
+  const [posts, setPosts] = useState<any>()
+  const [loading, setLoading] = useState<boolean>(false)
 
-export default async function PostFeed({}: Props) {
-  const posts = await getLocalPosts()
+  useEffect(() => {
+    async function fetchPosts() {
+      setLoading(true)
+      const postFeed = await getLocalPosts(lang)
+      setPosts(postFeed)
+      setLoading(false)
+    }
+    fetchPosts()
+  }, [lang]) // Ricarica i dati quando cambia la lingua
+
   return (
     <section className="container py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-      {posts?.length > 0 ? (
-        posts.map((post: any) => (
+      {loading ? (
+        <FontAwesomeIcon icon={faSpinner} spin className="w-14 h-14 text-primary" />
+      ) : (
+        posts?.map((post: any) => (
           <div key={post._id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
             <div className="p-6">
               <h2 className="text-2xl font-semibold text-gray-900 mb-3">{post.title}</h2>
@@ -22,7 +39,6 @@ export default async function PostFeed({}: Props) {
               </div>
             </div>
 
-            {/* Link to the individual post */}
             <div className="p-6 pt-2">
               <Link href={`/es/blog/${post.slug}`} className="text-blue-500 text-primary font-medium">
                 Leer mas <FontAwesomeIcon icon={faArrowRight} className="ms-4 w-4 h-4" />
@@ -30,8 +46,6 @@ export default async function PostFeed({}: Props) {
             </div>
           </div>
         ))
-      ) : (
-        <p className="text-gray-500 text-center">No Published Post.</p>
       )}
     </section>
   )

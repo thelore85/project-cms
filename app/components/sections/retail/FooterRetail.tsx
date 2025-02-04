@@ -3,7 +3,7 @@ import {faEnvelope, faLocation, faLocationDot, faX} from '@fortawesome/free-soli
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
-import LanguageChanger from '../../utility/LanguageChanger'
+import LangSelector from '@/app/components/utility/LangSelector'
 
 type Props = {}
 
@@ -17,7 +17,7 @@ export default function FooterRetail({}: Props) {
             <Link href="/es" className="block text-4xl font-bold">
               Zeeguros
             </Link>
-            <LanguageChanger />
+            <LangSelector />
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Contacts</p>
