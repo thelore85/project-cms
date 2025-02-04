@@ -2,12 +2,14 @@ import React from 'react'
 import MenuDesk from './MenuDeskRetail'
 import MenuMobile from './MenuMobileRetail'
 
-type Props = {}
+type Props = {
+  lang: string
+}
 
-export default function NavigatorRetail({}: Props) {
+export default function NavigatorRetail({lang}: Props) {
   return (
     <div className="sticky top-0 z-50">
-      <MenuDesk />
+      <MenuDesk lang={lang} />
       <MenuMobile />
     </div>
   )
