@@ -1,4 +1,4 @@
-import {getPosts} from '@/sanity/sanity-utils'
+import {getPosts, getLocalPosts} from '@/sanity/sanity-utils'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {PortableText} from '@portabletext/react'
@@ -8,7 +8,7 @@ import Link from 'next/link'
 type Props = {}
 
 export default async function PostFeed({}: Props) {
-  const posts = await getPosts()
+  const posts = await getLocalPosts()
   return (
     <section className="container py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
       {posts?.length > 0 ? (
@@ -25,7 +25,7 @@ export default async function PostFeed({}: Props) {
             {/* Link to the individual post */}
             <div className="p-6 pt-2">
               <Link href={`/blog/${post.slug}`} className="text-blue-500 text-primary font-medium">
-                Leer mas <FontAwesomeIcon icon={faArrowRight} className="ms-4" />
+                Leer mas <FontAwesomeIcon icon={faArrowRight} className="ms-4 w-4 h-4" />
               </Link>
             </div>
           </div>

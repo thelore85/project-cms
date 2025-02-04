@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.1",
+    "@sanity/document-internationalization": "^3.3.1",
     "@sanity/icons": "^3.5.7",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.69.0",

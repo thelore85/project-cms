@@ -1,6 +1,6 @@
 'use client'
 
-import SinglePost from '@/app/components/sections/blog/SinglePost'
+import SinglePost from '@/app/components/blog/SinglePost'
 import {usePathname} from 'next/navigation'
 
 export default function BlogPostPage() {

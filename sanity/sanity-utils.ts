@@ -9,6 +9,25 @@ const client = createClient({
   useCdn: true, // Usa la CDN per query più veloci in ambienti di produzione
 })
 
+export async function getLocalPosts() {
+  const posts = await client.fetch(
+    groq`*[_type == "post" && language == 'es']{
+      _id,
+      _createdAt,
+      title,
+      body,
+      mainImage { asset -> { url }, alt },
+      "slug": slug.current,
+      "_translations": *[_type == "translation.metadata" && references(^._id)][0].translations[].value->{
+        title,
+        "slug": slug.current,
+        "language": language
+      }
+    }`,
+  )
+  return posts
+}
+
 export async function getPosts() {
   const posts = await client.fetch(
     groq`*[_type == "post"]{
