@@ -24,7 +24,7 @@ export default async function PostFeed({}: Props) {
 
             {/* Link to the individual post */}
             <div className="p-6 pt-2">
-              <Link href={`/blog/${post.slug}`} className="text-blue-500 text-primary font-medium">
+              <Link href={`/es/blog/${post.slug}`} className="text-blue-500 text-primary font-medium">
                 Leer mas <FontAwesomeIcon icon={faArrowRight} className="ms-4 w-4 h-4" />
               </Link>
             </div>

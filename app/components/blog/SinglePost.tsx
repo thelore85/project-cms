@@ -35,7 +35,7 @@ export default function SinglePost({slug}: Props) {
       <div className="container min-h-screen py-9">
         <main className="bg-white rounded-md shadow-md p-10">
           <h1 className="text-4xl font-bold mb-4">Nessun post trovato</h1>
-          <Link href="/blog" className="text-primary">
+          <Link href="/es/blog" className="text-primary">
             <FontAwesomeIcon icon={faArrowLeft} className="me-3" /> Volver al Blog
           </Link>
         </main>

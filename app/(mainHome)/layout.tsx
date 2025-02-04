@@ -9,7 +9,7 @@ type Props = {
 export default function BrokerLayout({children}: Props) {
   return (
     <>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <NavigatorRetail />
       {children}
       <Footer />
