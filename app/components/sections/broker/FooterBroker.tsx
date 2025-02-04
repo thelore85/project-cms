@@ -13,13 +13,13 @@ export default function FooterBroker({}: Props) {
         {/* ROW 1 */}
         <div className="md:flex justify-between gap-10 mb-24">
           <div className="p-10  w-1/3">
-            <Link href="/broker" className="block text-4xl font-bold">
+            <Link href="/es/broker" className="block text-4xl font-bold">
               Zeeguros
             </Link>
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Contacts</p>
-            <Link href="/broker" className="block mb-5">
+            <Link href="/es/broker" className="block mb-5">
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
               info@zeeguros.com
             </Link>
@@ -30,10 +30,10 @@ export default function FooterBroker({}: Props) {
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Pages</p>
-            <Link href="/broker" className="block mb-5">
+            <Link href="/es/broker" className="block mb-5">
               Homepage
             </Link>
-            <Link href="/legal" className="block mb-5">
+            <Link href="/es/legal" className="block mb-5">
               Terms and Conditions
             </Link>
           </div>

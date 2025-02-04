@@ -1,7 +1,6 @@
 import Footer from '@/app/components/sections/retail/FooterRetail'
 import ScrollToTop from '@/app/components/utility/ScrollToTop'
-import NavigatorBroker from '@/app/components/navigations/broker/NavigatorBroker'
-import FooterBroker from '@/app/components/sections/broker/FooterBroker'
+import NavigatorRetail from '@/app/components/navigations/retail/NavigatorRetail'
 
 type Props = {
   children: React.ReactNode
@@ -10,10 +9,9 @@ type Props = {
 export default function BrokerLayout({children}: Props) {
   return (
     <>
-      <ScrollToTop />
-      <NavigatorBroker />
+      <NavigatorRetail />
       {children}
-      <FooterBroker />
+      <Footer />
     </>
   )
 }

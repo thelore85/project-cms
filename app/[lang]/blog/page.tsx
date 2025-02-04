@@ -1,6 +1,6 @@
 import Footer from '@/app/components/sections/retail/FooterRetail'
 import PageTitle from '@/app/components/sections/PageTitle'
-import PostFeed from '@/app/components/sections/blog/PostFeed'
+import PostFeed from '@/app/components/blog/PostFeed'
 
 type Props = {}
 

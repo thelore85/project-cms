@@ -1,11 +1,11 @@
 'use client'
 
-import SinglePost from '@/app/components/sections/blog/SinglePost'
+import SinglePost from '@/app/components/blog/SinglePost'
 import {usePathname} from 'next/navigation'
 
 export default function BlogPostPage() {
   const path = usePathname()
-  const blogSlug = path.split('/')[2]
+  const blogSlug = path.split('/')[3]
 
   console.log('///////// slug blog', blogSlug)
 

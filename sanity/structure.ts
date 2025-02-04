@@ -4,6 +4,7 @@ export const structure: StructureResolver = S =>
   S.list()
     .title('Content')
     .items([
+      //
       // Sezione "Blog"
       S.listItem()
         .title('Blog')
@@ -13,14 +14,38 @@ export const structure: StructureResolver = S =>
             .items([S.documentTypeListItem('post').title('Posts'), S.documentTypeListItem('category').title('Categories'), S.documentTypeListItem('author').title('Authors')]),
         ),
 
-      // // Sezione "Pages"
+      // // // Sezione "Blog" with language filter
       // S.listItem()
-      //   .title('Pages')
+      //   .title('Blog')
       //   .child(
       //     S.list()
-      //       .title('Pages')
+      //       .title('Blog')
       //       .items([
-      //         S.documentTypeListItem('page').title('Pages'), // Gestione dei documenti "page"
+      //         // Sezione per le categorie
+      //         S.documentTypeListItem('category').title('Categories'),
+
+      //         // Sezione per gli autori
+      //         S.documentTypeListItem('author').title('Authors'),
+
+      //         // Sezione per la lingua (Blog suddiviso per lingua)
+      //         S.listItem()
+      //           .title('Post')
+      //           .child(
+      //             S.list()
+      //               .title('Language')
+      //               .items([
+      //                 // Sezione per la lingua inglese
+      //                 S.listItem().title('English').child(S.documentList().filter('_type == "post" && language == "en"').title('English Posts')),
+
+      //                 // Sezione per la lingua italiana
+      //                 S.listItem().title('Italian').child(S.documentList().filter('_type == "post" && language == "it"').title('Italian Posts')),
+
+      //                 // Sezione per la lingua spagnola
+      //                 S.listItem().title('Spanish').child(S.documentList().filter('_type == "post" && language == "es"').title('Spanish Posts')),
+      //                 // Sezione per la lingua spagnola
+      //                 S.listItem().title('Others').child(S.documentList().filter('_type == "post" && language == ""').title('Spanish Posts')),
+      //               ]),
+      //           ),
       //       ]),
       //   ),
 
@@ -33,6 +58,6 @@ export const structure: StructureResolver = S =>
         .child(
           S.list()
             .title('Components')
-            .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('service').title('service'), S.documentTypeListItem('burger').title('burger')]),
+            .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('service').title('service')]),
         ),
     ])

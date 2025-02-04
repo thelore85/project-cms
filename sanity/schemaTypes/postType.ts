@@ -8,6 +8,23 @@ export const postType = defineType({
   icon: DocumentTextIcon,
   fields: [
     defineField({
+      name: 'language',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'English', value: 'en'},
+          {title: 'Italiano', value: 'it'},
+          {title: 'Español', value: 'es'},
+        ],
+      },
+    }),
+    defineField({
+      name: 'translations',
+      type: 'array',
+      title: 'Translations',
+      of: [{type: 'reference', to: [{type: 'post'}]}],
+    }),
+    defineField({
       name: 'title',
       type: 'string',
     }),
@@ -34,8 +51,8 @@ export const postType = defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative text',
-        }
-      ]
+        },
+      ],
     }),
     defineField({
       name: 'categories',

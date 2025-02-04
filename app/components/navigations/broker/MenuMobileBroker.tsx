@@ -1,5 +1,5 @@
 import React from 'react'
-import SideNav from '../SideNavRetail'
+import SideNav from './SideNavBroker'
 import LogoBlack from './LogoBlackBroker'
 
 type Props = {}
