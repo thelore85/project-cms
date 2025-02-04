@@ -7,11 +7,10 @@ type Props = {}
 export default async function Legal({}: Props) {
   return (
     <div className="min-h-screen">
-      <main className="">
-        <PageTitle title="Terms and condition" description="here you can find all terms of your Zeeguros account" />
+      <div className="justify-center items-start min-h-screen bg-gray-100">
+        <PageTitle title="Terms and Conditions " description="Find here all terms and condition you can find" />
         <FreeText />
-        <FooterStandard />
-      </main>
+      </div>
     </div>
   )
 }
