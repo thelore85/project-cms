@@ -1,12 +1,12 @@
 'use client'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import LogoBlack from './broker/LogoBlackBroker'
+import LogoBlack from './LogoBlackBroker'
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import CtaMain from '../buttons/CtaMain'
-import CtaBroker from '../buttons/CtaBroker'
+import CtaMain from '../../buttons/CtaMain'
+import CtaBroker from '../../buttons/CtaBroker'
 
 type Props = {}
 
@@ -43,10 +43,10 @@ export default function SideNav({}: Props) {
           <div className="py-20 flex-grow flex flex-col">
             <ul className="list-none text-3xl font-bold text-primary">
               {[
-                {href: '/#howTo', label: 'Sobre Nosotros'},
-                {href: '/#faq', label: 'FAQ'},
-                {href: '/#testimonials', label: 'Opiniones'},
-                {href: '/#footer', label: 'Contactos'},
+                {href: '/es/broker/#howTo', label: 'Sobre Nosotros'},
+                {href: '/es/broker/#faq', label: 'FAQ'},
+                {href: '/es/broker/#testimonials', label: 'Opiniones'},
+                {href: '/es/broker/#footer', label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>

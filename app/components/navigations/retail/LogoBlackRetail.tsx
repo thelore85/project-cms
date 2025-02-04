@@ -6,7 +6,7 @@ type Props = {}
 
 export default function LogoBlackRetail({}: Props) {
   return (
-    <Link href="/">
+    <Link href="/es">
       <Image className="w-auto h-[40px]" src="/img/components/navigation/logoBlack.png" alt="ZeeGuros" width={'240'} height={'60'} />
     </Link>
   )

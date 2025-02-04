@@ -1,8 +1,8 @@
 import {Noticia_Text, Poppins} from 'next/font/google'
-import '../globals.css'
+import '@/app/globals.css'
 
 // Comonents
-import ScrollToTop from '../components/utility/ScrollToTop'
+import ScrollToTop from '@/app/components/utility/ScrollToTop'
 
 const noticiaText = Noticia_Text({
   subsets: ['latin'],
