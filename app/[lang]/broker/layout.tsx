@@ -3,9 +3,7 @@ import FooterBroker from '@/app/components/sections/broker/FooterBroker'
 
 type Props = {
   children: React.ReactNode
-  params: {
-    lang: string
-  }
+  params: any
 }
 
 export default async function BrokerLayout({children, params}: Props) {

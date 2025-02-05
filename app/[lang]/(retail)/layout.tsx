@@ -3,9 +3,7 @@ import NavigatorRetail from '@/app/components/navigations/retail/NavigatorRetail
 
 type Props = {
   children: React.ReactNode
-  params: {
-    lang: string
-  }
+  params: any
 }
 
 export default async function RetailLayout({children, params}: Props) {
