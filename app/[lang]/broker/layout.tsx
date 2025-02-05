@@ -8,8 +8,8 @@ type Props = {
   }
 }
 
-export default function BrokerLayout({children, params}: Props) {
-  const {lang} = params
+export default async function BrokerLayout({children, params}: Props) {
+  const {lang} = await params
   return (
     <>
       <NavigatorBroker lang={lang} />

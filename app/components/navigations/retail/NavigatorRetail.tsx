@@ -8,7 +8,8 @@ type Props = {
 
 export default function NavigatorRetail({lang}: Props) {
   return (
-    <div className="sticky top-0 z-50">
+    <div>
+      {/* <div className="sticky top-0 z-50"> */}
       <MenuDesk lang={lang} />
       <MenuMobile />
     </div>
