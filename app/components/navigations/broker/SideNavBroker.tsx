@@ -1,16 +1,18 @@
 'use client'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import LogoBlack from './LogoBlackBroker'
+import LogoBlackBroker from './LogoBlackBroker'
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import CtaMain from '../../buttons/CtaMain'
 import CtaBroker from '../../buttons/CtaBroker'
 
-type Props = {}
+type Props = {
+  lang: string
+}
 
-export default function SideNav({}: Props) {
+export default function SideNavBroker({lang}: Props) {
   const [open, setOpen] = useState(false)
 
   // Blocca lo scroll del body quando il menu è aperto
@@ -35,7 +37,7 @@ export default function SideNav({}: Props) {
         <div className="fixed top-0 left-0 w-full h-screen bg-white p-5 z-50 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex justify-between items-center">
-            <LogoBlack />
+            <LogoBlackBroker lang={lang} />
             <FontAwesomeIcon icon={faX} className="w-5 h-5 text-primary cursor-pointer" onClick={() => setOpen(false)} />
           </div>
 
@@ -43,10 +45,10 @@ export default function SideNav({}: Props) {
           <div className="py-20 flex-grow flex flex-col">
             <ul className="list-none text-3xl font-bold text-primary">
               {[
-                {href: '/es/broker/#howTo', label: 'Sobre Nosotros'},
-                {href: '/es/broker/#faq', label: 'FAQ'},
-                {href: '/es/broker/#testimonials', label: 'Opiniones'},
-                {href: '/es/broker/#footer', label: 'Contactos'},
+                {href: `/${lang}/broker/#howTo`, label: 'Sobre Nosotros'},
+                {href: `/${lang}/broker/#faq`, label: 'FAQ'},
+                {href: `/${lang}/broker/#testimonials`, label: 'Opiniones'},
+                {href: `/${lang}/broker/#footer`, label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>
