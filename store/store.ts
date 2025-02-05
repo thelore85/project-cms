@@ -13,7 +13,7 @@ interface StoreState {
 
 const useStore = create<StoreState>(set => ({
   // Variables default value
-  lang: '',
+  lang: 'es',
   currency: 'EUR',
 
   // Actions

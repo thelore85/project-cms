@@ -1,18 +1,20 @@
-import Footer from '@/app/components/sections/retail/FooterRetail'
-import ScrollToTop from '@/app/components/utility/ScrollToTop'
 import NavigatorBroker from '@/app/components/navigations/broker/NavigatorBroker'
 import FooterBroker from '@/app/components/sections/broker/FooterBroker'
 
 type Props = {
   children: React.ReactNode
+  params: {
+    lang: string
+  }
 }
 
-export default function BrokerLayout({children}: Props) {
+export default function BrokerLayout({children, params}: Props) {
+  const {lang} = params
   return (
     <>
-      <NavigatorBroker />
+      <NavigatorBroker lang={lang} />
       {children}
-      <FooterBroker />
+      <FooterBroker lang={lang} />
     </>
   )
 }

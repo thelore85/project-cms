@@ -11,14 +11,25 @@ export default function LangSelector() {
 
   // update lang on pathchange for manua input
   useEffect(() => {
-    const currentLang = currentPathname.split('/')[1]
-    if (lang !== currentLang && ['es', 'en', 'it'].includes(currentLang)) {
-      setLang(currentLang)
-    }
-  }, [currentPathname])
-  console.log('///////// lang: ', lang)
+    langManager()
+  }, [])
 
-  // update lang variable and url path
+  const langManager = () => {
+    const urlLang = currentPathname.split('/')[1]
+    if (urlLang === '') {
+      // 1- LOAD DEFAULT LANGUAGE FROM BROWSER FAVOURITE
+      setLang('es')
+      return 'es'
+    }
+
+    if (urlLang !== '') {
+      // 2- DETECT PATH INPUT/CHANGE
+      setLang(urlLang)
+      return urlLang
+    }
+  }
+
+  // 3- UPDATE BY SELECTION
   const handleLangSelection = (newLang: string) => {
     if (newLang === lang) return // do not update if no change
     // const newPath = currentPathname.replace(`/${lang}`, `/${newLang}`)
@@ -27,6 +38,8 @@ export default function LangSelector() {
     setLang(newLang)
     router.push(newPath)
   }
+
+  console.log('//// lang: ', lang)
 
   return (
     <div className="mt-10">

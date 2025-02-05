@@ -5,31 +5,33 @@ import Link from 'next/link'
 import React from 'react'
 import LangSelector from '@/app/components/utility/LangSelector'
 
-type Props = {}
+type Props = {
+  lang: string
+}
 
-export default function FooterRetail({}: Props) {
+export default function FooterRetail({lang}: Props) {
   return (
     <section id="footer" className="bg-foreground py-32 text-white">
       <div className="container">
         {/* ROW 1 */}
         <div className="md:flex justify-between gap-10 mb-24">
           <div className="p-10  w-1/3">
-            <Link href="/es" className="block text-4xl font-bold">
+            <Link href={`/${lang}`} className="block text-4xl font-bold">
               Zeeguros
             </Link>
             <LangSelector />
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Contacts</p>
-            <Link href="/es" className="block mb-5">
+            <Link href={`/${lang}`} className="block mb-5">
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
               info@zeeguros.com
             </Link>
-            <Link href="/es" className="block mb-5">
+            <Link href={`/${lang}`} className="block mb-5">
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
               workwithus@zeeguros.com
             </Link>
-            <Link href="/es" className="block mb-5">
+            <Link href={`/${lang}`} className="block mb-5">
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 inline-block me-3" />
               marketing@zeeguros.com
             </Link>
@@ -40,7 +42,7 @@ export default function FooterRetail({}: Props) {
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Pages</p>
-            <Link href="/es" className="block mb-5">
+            <Link href={`/${lang}`} className="block mb-5">
               Homepage
             </Link>
             <Link href="/es/legal" className="block mb-5">
