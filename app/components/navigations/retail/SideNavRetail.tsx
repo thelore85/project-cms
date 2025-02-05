@@ -8,9 +8,11 @@ import {useEffect, useState} from 'react'
 import CtaMain from '../../buttons/CtaMain'
 import CtaBroker from '../../buttons/CtaBroker'
 
-type Props = {}
+type Props = {
+  lang: string
+}
 
-export default function SideNavRetail({}: Props) {
+export default function SideNavRetail({lang}: Props) {
   const [open, setOpen] = useState(false)
 
   // Blocca lo scroll del body quando il menu è aperto
@@ -35,7 +37,7 @@ export default function SideNavRetail({}: Props) {
         <div className="fixed top-0 left-0 w-full h-screen bg-white p-5 z-50 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex justify-between items-center">
-            <LogoBlack />
+            <LogoBlack lang={lang} />
             <FontAwesomeIcon icon={faX} className="w-5 h-5 text-primary cursor-pointer" onClick={() => setOpen(false)} />
           </div>
 
@@ -43,10 +45,10 @@ export default function SideNavRetail({}: Props) {
           <div className="py-20 flex-grow flex flex-col">
             <ul className="list-none text-3xl font-bold text-primary">
               {[
-                {href: '/es/#howTo', label: 'Sobre Nosotros'},
-                {href: '/es/#faq', label: 'FAQ'},
-                {href: '/es/#testimonials', label: 'Opiniones'},
-                {href: '/es/#footer', label: 'Contactos'},
+                {href: `/${lang}/#howTo`, label: 'Sobre Nosotros'},
+                {href: `/${lang}/#faq`, label: 'FAQ'},
+                {href: `/${lang}/#testimonials`, label: 'Opiniones'},
+                {href: `/${lang}/#footer`, label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>

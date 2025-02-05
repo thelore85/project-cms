@@ -45,10 +45,10 @@ export default function SideNavBroker({lang}: Props) {
           <div className="py-20 flex-grow flex flex-col">
             <ul className="list-none text-3xl font-bold text-primary">
               {[
-                {href: '/es/broker/#howTo', label: 'Sobre Nosotros'},
-                {href: '/es/broker/#faq', label: 'FAQ'},
-                {href: '/es/broker/#testimonials', label: 'Opiniones'},
-                {href: '/es/broker/#footer', label: 'Contactos'},
+                {href: `/${lang}/broker/#howTo`, label: 'Sobre Nosotros'},
+                {href: `/${lang}/broker/#faq`, label: 'FAQ'},
+                {href: `/${lang}/broker/#testimonials`, label: 'Opiniones'},
+                {href: `/${lang}/broker/#footer`, label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>
