@@ -9,23 +9,23 @@ const client = createClient({
   useCdn: true, // Usa la CDN per query più veloci in ambienti di produzione
 })
 
-type PostProps = {
-  _id: string
-  _createdAt: string
-  title: string
-  body: any // Puoi migliorare questa tipizzazione se conosci la struttura precisa del body
-  mainImage: {
-    asset: {
-      url: string
-    }
-    alt?: string
-  }
-  slug: string
-  _translations?: []
-}
+// type PostProps = {
+//   _id: string
+//   _createdAt: string
+//   title: string
+//   body: any // Puoi migliorare questa tipizzazione se conosci la struttura precisa del body
+//   mainImage: {
+//     asset: {
+//       url: string
+//     }
+//     alt?: string
+//   }
+//   slug: string
+//   _translations?: []
+// }
 
 export async function getLocalPosts(lang: string) {
-  const posts: PostProps = await client.fetch(
+  const posts = await client.fetch(
     groq`*[_type == "post" && language == $lang]{
       _id,
       _createdAt,
@@ -72,22 +72,38 @@ export async function getPost(slug: string) {
   )
 }
 
-// export async function getPost() {
-//   return await client.fetch(
-//     groq`*[_type == "post"][0]{
-//       title,
-//       _createdAt,
-//       body,
-//       mainImage { asset -> { url }, alt },
-//       "slug": slug.current
-//     }`,
-//   )
-// }
+export async function getPageBySlug(title: string) {
+  return await client.fetch(
+    groq`
+      *[_type == "page" && title == $title][0]{
+        title,
+        _createdAt,
+        body,
+        "slug": slug.current,
+        components[] -> {
+          _type,
+          title,
+          subtitle,
+          image { asset -> { url } },
+          button1 { label, url },
+          button2 { label, url },
+          sectionTitle,
+          sectionSubtitle,
+          serviceCards[] {
+            title,
+            description,
+            image { asset -> { url } }
+          }
+        }
+      }`,
+    {title},
+  )
+}
 
 export async function getPage() {
   return await client.fetch(
     groq`
-    *[_type == "page"][0]{
+    *[_type == "page"][1]{
       title,
       _createdAt,
       body,
@@ -106,24 +122,6 @@ export async function getPage() {
           description,
           image { asset -> { url } }
         }
-      }
-    }`,
-  )
-}
-
-export async function getBurgerMenu() {
-  return await client.fetch(
-    groq`
-    *[_type == "burger"][0]{
-      title,
-      description,
-      logo {
-        asset -> { url }
-      },
-      links[] {
-        label,
-        url,
-        slug
       }
     }`,
   )

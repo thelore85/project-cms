@@ -7,8 +7,8 @@ import {authorType} from './authorType'
 import {pageType} from './pageType'
 import {heroType} from './heroType'
 import {serviceType} from './serviceType'
-import {burgerMenuType} from './burgerMenuType'
+import {valueType} from './valueType'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
-  types: [blockContentType, categoryType, postType, authorType, pageType, heroType, serviceType, burgerMenuType],
+  types: [blockContentType, categoryType, postType, authorType, pageType, heroType, serviceType, valueType],
 }
