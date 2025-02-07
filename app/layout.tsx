@@ -1,4 +1,5 @@
 import {Noticia_Text, Poppins} from 'next/font/google'
+import {GoogleTagManager} from '@next/third-parties/google'
 import '@/app/globals.css'
 
 // Comonents
@@ -24,6 +25,7 @@ export default function RootLayout({children}: Props) {
   return (
     <html lang="es" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
       <body>
+        <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
         {/* <ScrollToTop /> */}
         {children}
       </body>
