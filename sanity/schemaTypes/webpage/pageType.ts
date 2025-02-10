@@ -20,7 +20,7 @@ export const pageType = {
       of: [
         {
           type: 'reference',
-          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}, {type: 'partnersBanner'}],
+          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}, {type: 'partnersBanner'}, {type: 'testimonial'}, {type: 'faq'}],
         },
         // Aggiungi altri componenti come 'menu', 'team', ecc.
       ],
