@@ -10,7 +10,8 @@ import {heroFormType} from './webpage/sections/heroFormType'
 import {serviceType} from './webpage/sections/serviceType'
 import {valueType} from './webpage/sections/valueType'
 import {howToType} from './webpage/sections/howToType'
+import {partnersBannerType} from './webpage/sections/partnersBannerType'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
-  types: [blockContentType, categoryType, postType, authorType, pageType, heroType, serviceType, valueType, howToType, heroFormType],
+  types: [blockContentType, categoryType, postType, authorType, pageType, heroType, serviceType, valueType, howToType, heroFormType, partnersBannerType],
 }

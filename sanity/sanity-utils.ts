@@ -98,6 +98,14 @@ export async function getPageBySlug(title: string) {
             "step3Image": step3.image.asset->url
           },
 
+          // Campi specifici per 'Partners Banner'
+          _type == "partnersBanner" => {
+            "title": title,
+            "logos": partnersLogo[] {
+              "image": image.asset->url
+            }
+          },
+
 
           // Campi specifici per 'value'
           _type == "value" => {
