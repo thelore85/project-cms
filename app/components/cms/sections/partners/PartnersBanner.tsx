@@ -10,7 +10,6 @@ type LogoProps = {
 }
 
 export default function PartnersBanner({section}: Props) {
-  console.log('//// partner banner: ', section)
   return (
     <section className="bg-primary py-10">
       <div className="flex gap-10 justify-between overflow-x-scroll overflow-hidden py-10">

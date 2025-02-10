@@ -106,6 +106,14 @@ export async function getPageBySlug(title: string) {
             }
           },
 
+          // Campi specifici per 'Testimonial'
+          _type == "testimonial" => {
+            "title": title,
+             "cards": testimonialCards[] {
+              "description": description,
+              "image": image.asset->url
+            }
+          },
 
           // Campi specifici per 'value'
           _type == "value" => {
