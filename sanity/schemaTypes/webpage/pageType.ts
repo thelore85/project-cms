@@ -17,13 +17,13 @@ export const pageType = {
       title: 'Page Description',
     },
     {
-      name: 'components',
+      name: 'sections',
       type: 'array',
-      title: 'Page Components',
+      title: 'Page Sections',
       of: [
         {
           type: 'reference',
-          to: [{type: 'hero'}, {type: 'service'}, {type: 'value'}],
+          to: [{type: 'hero'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}],
         },
         // Aggiungi altri componenti come 'menu', 'team', ecc.
       ],

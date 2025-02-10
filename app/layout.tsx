@@ -23,7 +23,7 @@ type Props = {
 
 export default function RootLayout({children}: Props) {
   return (
-    <html lang="es" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
+    <html lang="en" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
       <body>
         <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
         {/* <ScrollToTop /> */}
