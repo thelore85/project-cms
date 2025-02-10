@@ -1,11 +1,13 @@
 import {getPageBySlug} from '@/sanity/sanity-utils'
 
 // Components
-import Hero from '@/app/components/cms/sections/Hero'
-import ValueProposition from '@/app/components/cms/sections/ValueProposition'
-import Service from '@/app/components/cms/sections/Service'
+import Hero from '@/app/components/cms/sections/hero/Hero'
+import HeroForm from '@/app/components/cms/sections/hero/HeroForm'
+import ValueProposition from '@/app/components/cms/sections/valueProp/ValueProposition'
+import Service from '@/app/components/cms/sections/valueProp/Service'
 import Error404 from '@/app/components/sections/Error404'
 import HowTo from '@/app/components/cms/sections/howToRetail/HowTo'
+import PartnersBanner from '@/app/components/cms/sections/partners/PartnersBanner'
 
 type PageProps = {
   slug: string
@@ -23,13 +25,13 @@ export default async function SinglePageTemplate({slug}: PageProps) {
   const page = await getPageBySlug(slug)
   const sections = page?.sections
 
-  console.log('/// sections in page', page)
-
   const componentMap: compMapProps = {
     hero: Hero,
+    heroForm: HeroForm,
     service: Service,
     value: ValueProposition,
     howTo: HowTo,
+    partnersBanner: PartnersBanner,
   }
 
   if (!page || !page.sections) {

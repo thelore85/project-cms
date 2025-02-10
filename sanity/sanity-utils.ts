@@ -73,10 +73,15 @@ export async function getPageBySlug(title: string) {
             "image": image.asset->url,
             "title": title,
             "subtitle": subtitle,
-            "button1Label": button1.label,
-            "button1Url": button1.url,
-            "button2Label": button2.label,
-            "button2Url": button2.url
+            "buttonLabel": button1.label,
+            "buttonUrl": button1.url,
+          },
+
+          // Campi specifici per 'hero form'
+          _type == "heroForm" => {
+            "image": image.asset->url,
+            "title": sectionTitle,
+            "subtitle": subtitle,
           },
 
           // Campi specifici per 'howTo'
@@ -91,6 +96,14 @@ export async function getPageBySlug(title: string) {
             "step3Title": step3.title,
             "step3Description": step3.description,
             "step3Image": step3.image.asset->url
+          },
+
+          // Campi specifici per 'Partners Banner'
+          _type == "partnersBanner" => {
+            "title": title,
+            "logos": partnersLogo[] {
+              "image": image.asset->url
+            }
           },
 
 
