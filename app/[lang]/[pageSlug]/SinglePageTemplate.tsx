@@ -9,6 +9,7 @@ import Error404 from '@/app/components/sections/Error404'
 import HowTo from '@/app/components/cms/sections/howToRetail/HowTo'
 import PartnersBanner from '@/app/components/cms/sections/partners/PartnersBanner'
 import Testimonial from '@/app/components/cms/sections/testimonial/Testimonial'
+import Faq from '@/app/components/cms/sections/faq/Faq'
 
 type PageProps = {
   slug: string
@@ -34,6 +35,7 @@ export default async function SinglePageTemplate({slug}: PageProps) {
     howTo: HowTo,
     partnersBanner: PartnersBanner,
     testimonial: Testimonial,
+    faq: Faq,
   }
 
   if (!page || !page.sections) {

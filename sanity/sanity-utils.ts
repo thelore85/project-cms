@@ -115,6 +115,15 @@ export async function getPageBySlug(title: string) {
             }
           },
 
+          // Campi specifici per 'FAQ'
+          _type == "faq" => {
+            "title": title,
+             "cards": faqCards[] {
+              "content": content,
+              "title": title
+            }
+          },
+
           // Campi specifici per 'value'
           _type == "value" => {
             "title": sectionTitle,

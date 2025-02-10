@@ -66,6 +66,7 @@ export const structure: StructureResolver = S =>
               S.documentTypeListItem('howTo').title('Hot To'),
               S.documentTypeListItem('partnersBanner').title('Partners Banner'),
               S.documentTypeListItem('testimonial').title('Testimonial'),
+              S.documentTypeListItem('faq').title('F.A.Q.'),
             ]),
         ),
     ])
