@@ -9,21 +9,6 @@ const client = createClient({
   useCdn: true, // Usa la CDN per query più veloci in ambienti di produzione
 })
 
-// type PostProps = {
-//   _id: string
-//   _createdAt: string
-//   title: string
-//   body: any // Puoi migliorare questa tipizzazione se conosci la struttura precisa del body
-//   mainImage: {
-//     asset: {
-//       url: string
-//     }
-//     alt?: string
-//   }
-//   slug: string
-//   _translations?: []
-// }
-
 export async function getLocalPosts(lang: string) {
   const posts = await client.fetch(
     groq`*[_type == "post" && language == $lang]{
@@ -80,49 +65,46 @@ export async function getPageBySlug(title: string) {
         _createdAt,
         body,
         "slug": slug.current,
-        components[] -> {
+        sections[] -> {
           _type,
-          title,
-          subtitle,
-          image { asset -> { url } },
-          button1 { label, url },
-          button2 { label, url },
-          sectionTitle,
-          sectionSubtitle,
-          serviceCards[] {
-            title,
-            description,
-            image { asset -> { url } }
+
+          // Campi specifici per 'hero'
+          _type == "hero" => {
+            "image": image.asset->url,
+            "title": title,
+            "subtitle": subtitle,
+            "button1Label": button1.label,
+            "button1Url": button1.url,
+            "button2Label": button2.label,
+            "button2Url": button2.url
+          },
+
+          // Campi specifici per 'howTo'
+          _type == "howTo" => {
+            "title": title,
+            "step1Title": step1.title,
+            "step1Description": step1.description,
+            "step1Image": step1.image.asset->url,
+            "step2Title": step2.title,
+            "step2Description": step2.description,
+            "step2Image": step2.image.asset->url,
+            "step3Title": step3.title,
+            "step3Description": step3.description,
+            "step3Image": step3.image.asset->url
+          },
+
+
+          // Campi specifici per 'value'
+          _type == "value" => {
+            "title": sectionTitle,
+            "cards": serviceCards[] {
+              "title": title,
+              "description": description,
+              "image": image.asset->url
+            }
           }
         }
       }`,
     {title},
-  )
-}
-
-export async function getPage() {
-  return await client.fetch(
-    groq`
-    *[_type == "page"][1]{
-      title,
-      _createdAt,
-      body,
-      "slug": slug.current,
-      components[] -> {
-        _type,
-        title,
-        subtitle,
-        image { asset -> { url } },
-        button1 { label, url },
-        button2 { label, url },
-        sectionTitle,
-        sectionSubtitle,
-        serviceCards[] {
-          title,
-          description,
-          image { asset -> { url } }
-        }
-      }
-    }`,
   )
 }

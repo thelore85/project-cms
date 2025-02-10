@@ -1,17 +1,18 @@
 import {getPageBySlug} from '@/sanity/sanity-utils'
 
 // Components
-import Hero from '@/app/components/cms/sections/retail/Hero'
-import ValuePropositionRetail from '@/app/components/cms/sections/retail/ValuePropositionRetail'
-import Service from './comp/Service'
-import Error404 from '../../components/sections/Error404'
+import Hero from '@/app/components/cms/sections/Hero'
+import ValueProposition from '@/app/components/cms/sections/ValueProposition'
+import Service from '@/app/components/cms/sections/Service'
+import Error404 from '@/app/components/sections/Error404'
+import HowTo from '@/app/components/cms/sections/howToRetail/HowTo'
 
 type PageProps = {
   slug: string
 }
 
 type compMapProps = {
-  [key: string]: React.FC<{component: any}>
+  [key: string]: React.FC<{section: any}>
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,25 +21,26 @@ type compMapProps = {
 
 export default async function SinglePageTemplate({slug}: PageProps) {
   const page = await getPageBySlug(slug)
-  const components = page?.components
+  const sections = page?.sections
 
-  console.log(components)
+  console.log('/// sections in page', page)
 
   const componentMap: compMapProps = {
     hero: Hero,
     service: Service,
-    value: ValuePropositionRetail,
+    value: ValueProposition,
+    howTo: HowTo,
   }
 
-  if (!page || !page.components) {
+  if (!page || !page.sections) {
     return <Error404 />
   }
 
   return (
     <>
-      {components?.map((component: any, index: number) => {
-        const Component = componentMap[component._type]
-        return Component ? <Component key={index} component={component} /> : null
+      {sections?.map((section: any, index: number) => {
+        const Component = componentMap[section._type]
+        return Component ? <Component key={index} section={section} /> : null
       })}
     </>
   )

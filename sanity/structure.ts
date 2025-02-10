@@ -58,6 +58,6 @@ export const structure: StructureResolver = S =>
         .child(
           S.list()
             .title('Sections')
-            .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('service').title('service'), S.documentTypeListItem('value').title('value')]),
+            .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('service').title('service'), S.documentTypeListItem('value').title('value'), S.documentTypeListItem('howTo').title('Hot To')]),
         ),
     ])
