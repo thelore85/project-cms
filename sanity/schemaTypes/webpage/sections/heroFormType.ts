@@ -1,8 +1,8 @@
 // schemas/hero.ts
-export const heroType = {
-  name: 'hero',
+export const heroFormType = {
+  name: 'heroForm',
   type: 'document',
-  title: 'Hero',
+  title: 'Hero Form',
   fields: [
     {
       name: 'image',
@@ -13,44 +13,26 @@ export const heroType = {
       },
     },
     {
-      name: 'previewTitle',
+      name: 'title',
       description: 'Use this field for Sanity studio preview',
       type: 'string',
-      title: 'Preview Title',
+      title: 'Title',
     },
     {
-      name: 'title',
+      name: 'sectionTitle',
       description: 'This is the h1 title renderd in the page',
       type: 'string',
-      title: 'Title',
+      title: 'Section Title',
     },
     {
       name: 'subtitle',
       type: 'string',
       title: 'Subtitle',
     },
-    {
-      name: 'button',
-      type: 'object',
-      title: 'Button 1',
-      fields: [
-        {
-          name: 'label',
-          type: 'string',
-          title: 'Button Label',
-        },
-        {
-          name: 'url',
-          type: 'string',
-          description: 'User relative path, not full URL location. (eg: "/cookie-policy")',
-          title: 'Button URL Path',
-        },
-      ],
-    },
   ],
   preview: {
     select: {
-      title: 'previewTitle', // Seleziona il titolo
+      title: 'title', // Seleziona il titolo
       subtitle: 'subtitle', // Seleziona il sottotitolo
       media: 'image', // Seleziona l'immagine per l'anteprima
     },

@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import CtaMain from '@/app/components/buttons/CtaMain'
+
 import FormNewsletter from '@/app/components/form/FormNewsletter'
 
 type Props = {
   section: any
 }
 
-export default function Hero({section}: Props) {
+export default function HeroForm({section}: Props) {
   return (
     <section className="bg-background">
       <div className="container">
@@ -15,7 +15,6 @@ export default function Hero({section}: Props) {
             <div>
               <h1 className="font-bold mb-10 text-primary-foreground">{section.title}</h1>
               <p className="text-3xl text-primary-foreground mb-10">{section.subtitle}</p>
-              {/* <CtaMain /> */}
               <FormNewsletter />
             </div>
 

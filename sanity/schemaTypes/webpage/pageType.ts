@@ -1,6 +1,3 @@
-// schemas/page.ts
-import {defineField} from 'sanity'
-
 export const pageType = {
   name: 'page',
   type: 'document',
@@ -23,7 +20,7 @@ export const pageType = {
       of: [
         {
           type: 'reference',
-          to: [{type: 'hero'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}],
+          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}],
         },
         // Aggiungi altri componenti come 'menu', 'team', ecc.
       ],
