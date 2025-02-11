@@ -1,5 +1,5 @@
-import NavigatorBroker from '@/app/components/navigations/broker/NavigatorBroker'
-import FooterBroker from '@/app/components/sections/broker/FooterBroker'
+import NavigatorBroker from '@/components/navigations/broker/NavigatorBroker'
+import FooterBroker from '@/components/sections/broker/FooterBroker'
 
 type Props = {
   children: React.ReactNode

@@ -1,4 +1,4 @@
-import LogoBlackRetail from '@/app/components/navigations/retail/LogoBlackRetail'
+import LogoBlackRetail from '@/components/navigations/retail/LogoBlackRetail'
 import Link from 'next/link'
 import React from 'react'
 

@@ -6,11 +6,12 @@
   :root {
     --background: hsl(27, 36%, 95%);
     --foreground: hsl(0, 1%, 14%);
+    --gradient: linear-gradient(180deg, #e63d86, #dfac608b);
     --card: hsl(0, 0%, 100%);
     --card-foreground: #242323;
     --popover: hsl(0, 0%, 100%);
     --popover-foreground: #242323;
-    --primary: hsl(149, 94%, 34%);
+    --primary: #ff475a;
     --primary-foreground: hsl(0, 0%, 98%);
     --secondary: hsl(41, 92%, 64%);
     --secondary-light: hsl(42, 80%, 73%);
@@ -81,6 +82,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1300px;
+}
+
+.bg-gradient {
+  background: var(--gradient);
 }
 
 h1,
