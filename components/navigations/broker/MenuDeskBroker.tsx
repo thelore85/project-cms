@@ -23,7 +23,7 @@ export default function MenuDeskBroker({lang}: Props) {
           </Link>
         </div>
         <div className="">
-          <Link href={`/${lang}`} className=" me-6 text-primary hover:text-foreground">
+          <Link href={`/${lang}/home`} className=" me-6 text-primary hover:text-foreground">
             <span>¿Eres Particular?</span>
           </Link>
           <Link href={`/${lang}/broker`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">

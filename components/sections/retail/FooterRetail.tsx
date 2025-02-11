@@ -16,7 +16,7 @@ export default function FooterRetail({lang}: Props) {
         {/* ROW 1 */}
         <div className="md:flex justify-between gap-10 mb-24">
           <div className="p-10  w-1/3">
-            <Link href={`/${lang}`} className="block text-4xl font-bold">
+            <Link href={`/${lang}/home`} className="block text-4xl font-bold">
               Zeeguros
             </Link>
             <LangSelector />
@@ -42,7 +42,7 @@ export default function FooterRetail({lang}: Props) {
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Pages</p>
-            <Link href={`/${lang}`} className="block mb-5">
+            <Link href={`/${lang}/home`} className="block mb-5">
               Homepage
             </Link>
             <Link href="/es/legal" className="block mb-5">

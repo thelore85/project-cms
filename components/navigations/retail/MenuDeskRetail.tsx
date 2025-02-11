@@ -14,16 +14,16 @@ export default function MenuDesk({lang}: Props) {
       <nav className="flex items-center justify-between bg-white rounded-full border-2 border-black shadow-flat px-8 py-4 font-bold font-noticia">
         <div className="flex items-center w-3/5 justify-left gap-10">
           <LogoBlackRetail lang={lang} />
-          <Link href={`/${lang}/#howTo`} className="hover:text-primary">
+          <Link href={`/${lang}/home/#howTo`} className="hover:text-primary">
             <span>Sobre Nosotros</span>
           </Link>
-          <Link href={`/${lang}/#testimonials`} className="hover:text-primary">
+          <Link href={`/${lang}/home/#testimonials`} className="hover:text-primary">
             <span>Opiniones</span>
           </Link>
-          <Link href={`/${lang}/#faq`} className="hover:text-primary">
+          <Link href={`/${lang}/home/#faq`} className="hover:text-primary">
             <span>Faq</span>
           </Link>
-          <Link href={`/${lang}/#footer`} className="hover:text-primary">
+          <Link href={`/${lang}/home/#footer`} className="hover:text-primary">
             <span>Contacto</span>
           </Link>
           <Link href={`/${lang}/blog`} className="hover:text-primary">
@@ -34,7 +34,7 @@ export default function MenuDesk({lang}: Props) {
           <Link href={`/${lang}/broker`} className=" me-6 text-primary hover:text-foreground">
             <span>¿Eres broker?</span>
           </Link>
-          <Link href={`/${lang}`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
+          <Link href={`/${lang}/home`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
             <span className="">Iniciar sesión</span>
           </Link>
         </div>
