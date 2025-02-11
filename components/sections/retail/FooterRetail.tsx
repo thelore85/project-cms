@@ -3,7 +3,7 @@ import {faEnvelope, faLocation, faLocationDot, faX} from '@fortawesome/free-soli
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
-import LangSelector from '@/app/components/utility/LangSelector'
+import LangSelector from '@/components/utility/LangSelector'
 
 type Props = {
   lang: string

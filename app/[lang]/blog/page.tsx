@@ -1,5 +1,5 @@
-import PageTitle from '@/app/components/sections/PageTitle'
-import PostFeed from '@/app/components/blog/PostFeed'
+import PageTitle from '@/components/sections/PageTitle'
+import PostFeed from '@/components/blog/PostFeed'
 
 type Props = {}
 

@@ -1,6 +1,6 @@
-import MetaDataGeneric from '@/app/components/metaData/MetaDataGeneric'
-import HeroBroker from '@/app/components/sections/broker/HeroBroker'
-import ValuePropositionBroker from '@/app/components/sections/broker/ValuePropositionBroker'
+import MetaDataGeneric from '@/components/metaData/MetaDataGeneric'
+import HeroBroker from '@/components/sections/broker/HeroBroker'
+import ValuePropositionBroker from '@/components/sections/broker/ValuePropositionBroker'
 
 export default async function Home() {
   return (

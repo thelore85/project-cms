@@ -3,7 +3,7 @@ import {GoogleTagManager} from '@next/third-parties/google'
 import '@/app/globals.css'
 
 // Comonents
-// import ScrollToTop from '@/app/components/utility/ScrollToTop'
+// import ScrollToTop from '@/components/utility/ScrollToTop'
 
 const noticiaText = Noticia_Text({
   subsets: ['latin'],
