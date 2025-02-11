@@ -9,7 +9,7 @@ type Props = {
 
 export default function LogoBlackRetail({lang}: Props) {
   return (
-    <Link href={`/${lang}`}>
+    <Link href={`/${lang}/home`}>
       <Image className="w-auto h-[40px]" src="/img/components/navigation/logoBlack.png" alt="ZeeGuros" width={'240'} height={'60'} />
     </Link>
   )
