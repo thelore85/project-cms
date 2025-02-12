@@ -31,7 +31,7 @@ export default defineConfig({
         {id: 'it', title: 'Italiano'},
         {id: 'es', title: 'Español'},
       ],
-      schemaTypes: ['post'],
+      schemaTypes: ['post', 'page'],
     }),
   ],
 })
