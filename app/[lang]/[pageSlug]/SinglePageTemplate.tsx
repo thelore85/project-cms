@@ -10,6 +10,7 @@ import HowTo from '@/components/cms/sections/howToRetail/HowTo'
 import PartnersBanner from '@/components/cms/sections/partners/PartnersBanner'
 import Testimonial from '@/components/cms/sections/testimonial/Testimonial'
 import Faq from '@/components/cms/sections/faq/Faq'
+import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
 
 type PageProps = {
   slug: string
@@ -36,6 +37,7 @@ export default async function SinglePageTemplate({slug}: PageProps) {
     partnersBanner: PartnersBanner,
     testimonial: Testimonial,
     faq: Faq,
+    bigCardLeft: BigCardLeft,
   }
 
   if (!page || !page.sections) {

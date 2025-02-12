@@ -132,7 +132,17 @@ export async function getPageBySlug(title: string) {
               "description": description,
               "image": image.asset->url
             }
-          }
+          },
+
+
+          // Campi specifici per 'bigCardLeft'
+          _type == "bigCardLeft" => {
+            "image": image.asset->url,
+            "title": title,
+            "subtitle": subtitle,
+            "content": content,
+          },
+
         }
       }`,
     {title},
