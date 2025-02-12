@@ -14,6 +14,7 @@ import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
 
 type PageProps = {
   slug: string
+  lang: string
 }
 
 type compMapProps = {
@@ -24,8 +25,9 @@ type compMapProps = {
 //// PERFORMANCE NOTE: consider using next/dynamics to import only components used in the loaded page !! ////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export default async function SinglePageTemplate({slug}: PageProps) {
-  const page = await getPageBySlug(slug)
+export default async function SinglePageTemplate({slug, lang}: PageProps) {
+  console.log('////////// lang in page fetch: ', lang)
+  const page = await getPageBySlug(slug, lang)
   const sections = page?.sections
 
   const componentMap: compMapProps = {
