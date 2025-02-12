@@ -97,6 +97,11 @@ body {
   background: var(--gradient);
 }
 
+.blurred-sides {
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
 h1,
 h2 {
   font-family: var(--font-noticia-text);

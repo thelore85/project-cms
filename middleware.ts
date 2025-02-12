@@ -12,6 +12,9 @@ export function middleware(req: NextRequest) {
   if (pathname.startsWith('/admin')) {
     return NextResponse.next()
   }
+  if (pathname.startsWith('/img')) {
+    return NextResponse.next()
+  }
 
   // Se la path è già una lingua (es. /en, /it) non fare nulla
   const firstSegment = pathname.split('/')[1]

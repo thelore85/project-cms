@@ -23,10 +23,10 @@ type compMapProps = {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// PERFORMANCE NOTE: consider using next/dynamics to import only components used in the loaded page !! ////
+//// PERFORMANCE NOTE: mayne is not necessary the above optimization due to server rendering             ////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 export default async function SinglePageTemplate({slug, lang}: PageProps) {
-  console.log('////////// lang in page fetch: ', lang)
   const page = await getPageBySlug(slug, lang)
   const sections = page?.sections
 
