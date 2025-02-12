@@ -33,7 +33,7 @@ export default function LangSelector() {
   const handleLangSelection = (newLang: string) => {
     if (newLang === lang) return // do not update if no change
     // const newPath = currentPathname.replace(`/${lang}`, `/${newLang}`)
-    const newPath = `/${newLang}`
+    const newPath = `/${newLang}/home`
 
     setLang(newLang)
     router.push(newPath)

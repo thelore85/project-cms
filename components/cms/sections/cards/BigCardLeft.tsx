@@ -5,7 +5,6 @@ type Props = {
 }
 
 export default function BigCardLeft({section}: Props) {
-  console.log('///////// big card section: ', section)
   return (
     <section id="valueProposition" className="bg-background">
       <div className="container my-20">

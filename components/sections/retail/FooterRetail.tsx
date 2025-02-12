@@ -51,7 +51,7 @@ export default function FooterRetail({lang}: Props) {
             <Link href="/es/blog" className="block mb-5">
               Blog
             </Link>
-            <Link href="/admin" className="block mb-5">
+            <Link href="/admin" target="_blank" className="block mb-5">
               Admin
             </Link>
           </div>

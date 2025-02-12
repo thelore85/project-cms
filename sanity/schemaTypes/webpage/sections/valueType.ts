@@ -4,14 +4,16 @@ export const valueType = {
   type: 'document',
   fields: [
     {
-      name: 'sectionTitle',
+      name: 'previewTitle',
+      description: 'Use this field for Sanity studio preview',
       type: 'string',
-      title: 'Section Title',
+      title: 'Preview Title',
     },
     {
-      name: 'sectionSubtitle',
+      name: 'sectionTitle',
+      description: 'This is the h1 title renderd in the page',
       type: 'string',
-      title: 'Section Subtitle',
+      title: 'Section Title',
     },
     {
       name: 'serviceCards',
@@ -53,7 +55,7 @@ export const valueType = {
   ],
   preview: {
     select: {
-      title: 'sectionTitle',
+      title: 'previewTitle',
       subtitle: 'sectionSubtitle',
     },
   },
