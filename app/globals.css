@@ -6,7 +6,7 @@
   :root {
     --background: hsl(27, 36%, 95%);
     --foreground: hsl(0, 1%, 14%);
-    --gradient: linear-gradient(160deg, #ff1563, #dfac608b);
+    --gradient: linear-gradient(-160deg, #ff1563, #dfac608b);
     --card: hsl(0, 0%, 100%);
     --card-foreground: #242323;
     --popover: hsl(0, 0%, 100%);
