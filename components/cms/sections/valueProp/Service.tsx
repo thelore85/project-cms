@@ -12,9 +12,9 @@ export default function Service({section}: Props) {
         <p className="text-lg mb-8">{section.sectionSubtitle || 'Service Section Subtitle'}</p>
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> */}
         <div className="flex flex-wrap justify-center">
-          {section.serviceCards?.map((card: any, cardIndex: number) => (
+          {section.serviceCards?.map((card: any, index: number) => (
             <div className="w-1/3 p-2">
-              <div key={cardIndex} className=" bg-white rounded-lg shadow-md p-4 ">
+              <div key={index} className=" bg-white rounded-lg shadow-md p-4 ">
                 <div className="text-center">
                   <img src={card.image?.asset?.url || ''} alt={card.title || ''} className="inline-block h-20 w-20 object-cover p-4" />
                   <h3 className="text-3xl font-semibold mb-2">{card.title || 'Card Title'}</h3>

@@ -18,7 +18,7 @@ export default function HeroForm({section}: Props) {
               <FormNewsletter />
             </div>
 
-            <Image src={section?.image} alt="hero image" className="w-[500px] h-[500px] object-contain hidden lg:block" width={500} height={500} />
+            <Image src={section?.image} priority alt="hero image" className="w-[500px] h-[500px] object-contain hidden lg:block" width={500} height={500} />
           </div>
         </div>
       </div>
