@@ -4,9 +4,16 @@ export const howToType = {
   type: 'document',
   fields: [
     {
-      name: 'title',
+      name: 'previewTitle',
+      description: 'Use this field for Sanity studio preview',
       type: 'string',
-      title: 'Section Title',
+      title: 'Preview Title',
+    },
+    {
+      name: 'title',
+      description: 'This is the h1 title renderd in the page',
+      type: 'string',
+      title: 'Title',
     },
     {
       name: 'step1',
@@ -41,7 +48,7 @@ export const howToType = {
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'previewTitle',
     },
   },
 }

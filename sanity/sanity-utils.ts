@@ -57,10 +57,10 @@ export async function getPost(slug: string) {
   )
 }
 
-export async function getPageBySlug(title: string) {
+export async function getPageBySlug(title: string, lang: string) {
   return await client.fetch(
     groq`
-      *[_type == "page" && title == $title][0]{
+      *[_type == "page" && title == $title && language == $lang][0]{
         title,
         _createdAt,
         body,
@@ -132,9 +132,19 @@ export async function getPageBySlug(title: string) {
               "description": description,
               "image": image.asset->url
             }
-          }
+          },
+
+
+          // Campi specifici per 'bigCardLeft'
+          _type == "bigCardLeft" => {
+            "image": image.asset->url,
+            "title": title,
+            "subtitle": subtitle,
+            "content": content,
+          },
+
         }
       }`,
-    {title},
+    {title, lang},
   )
 }

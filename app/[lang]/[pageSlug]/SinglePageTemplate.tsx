@@ -10,9 +10,11 @@ import HowTo from '@/components/cms/sections/howToRetail/HowTo'
 import PartnersBanner from '@/components/cms/sections/partners/PartnersBanner'
 import Testimonial from '@/components/cms/sections/testimonial/Testimonial'
 import Faq from '@/components/cms/sections/faq/Faq'
+import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
 
 type PageProps = {
   slug: string
+  lang: string
 }
 
 type compMapProps = {
@@ -21,10 +23,11 @@ type compMapProps = {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// PERFORMANCE NOTE: consider using next/dynamics to import only components used in the loaded page !! ////
+//// PERFORMANCE NOTE: mayne is not necessary the above optimization due to server rendering             ////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export default async function SinglePageTemplate({slug}: PageProps) {
-  const page = await getPageBySlug(slug)
+export default async function SinglePageTemplate({slug, lang}: PageProps) {
+  const page = await getPageBySlug(slug, lang)
   const sections = page?.sections
 
   const componentMap: compMapProps = {
@@ -36,6 +39,7 @@ export default async function SinglePageTemplate({slug}: PageProps) {
     partnersBanner: PartnersBanner,
     testimonial: Testimonial,
     faq: Faq,
+    bigCardLeft: BigCardLeft,
   }
 
   if (!page || !page.sections) {

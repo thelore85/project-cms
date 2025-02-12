@@ -8,16 +8,16 @@ type Props = {
   number: string
 }
 
-export default function HowToCards({title, imgUrl, description, number}: Props) {
+export default function HowToCardsBottomLeft({title, imgUrl, description, number}: Props) {
   return (
     <div className="bg-white border-2 border-black p-3 rounded-xl shadow-flat w-full lg:max-w-[500px] mb-10 lg:mb-0">
       <div className="relative mb-10">
         <div className="absolute flex justify-center items-center top-[-25px] left-[-25px] rounded-full bg-white p-8 w-[60px] h-[60px] border-2 border-black">
           <span className="font-noticia text-secondary font-bold text-4xl">{number}</span>
         </div>
-        <h3 className="block text-center px-6 py-2 rounded-md text-black">{title}</h3>
-        <div className="absolute top-[-20px] right-[-90px] hidden md:block ">
-          <Image src={imgUrl} alt="photo" className="w-[130px] h-[80px]" width={200} height={200} />
+        <h3 className="block text-center px-10 py-2 rounded-md text-black text-pretty">{title}</h3>
+        <div className="absolute top-[160px] left-[-80px] hidden md:block ">
+          <Image src={imgUrl} alt="photo" className="w-[130px] h-[160px]" width={200} height={200} />
         </div>
       </div>
       <div className="rounded-lg py-5 px-8 text-white bg-primary flex justify-between items-center">

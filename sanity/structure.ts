@@ -49,8 +49,23 @@ export const structure: StructureResolver = S =>
             ]),
         ),
 
+      /////////////////////////////////////////////
       // Sezione "Pages"
-      S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
+        .title('Pages')
+        .child(
+          S.list()
+            .title('Language')
+            .items([
+              S.listItem().title('English').child(S.documentList().filter('_type == "page" && language == "en"').title('English Pages')),
+              S.listItem().title('Italian').child(S.documentList().filter('_type == "page" && language == "it"').title('Italian Pages')),
+              S.listItem().title('Spanish').child(S.documentList().filter('_type == "page" && language == "es"').title('Spanish Pages')),
+              S.listItem().title('Others').child(S.documentList().filter('_type == "page" && !defined(language)').title('Unassigned Language Pages')),
+            ]),
+        ),
+
+      // Sezione "Pages"
+      // S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
 
       // Sezione "Components"
       S.listItem()
@@ -67,6 +82,7 @@ export const structure: StructureResolver = S =>
               S.documentTypeListItem('partnersBanner').title('Partners Banner'),
               S.documentTypeListItem('testimonial').title('Testimonial'),
               S.documentTypeListItem('faq').title('F.A.Q.'),
+              S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
             ]),
         ),
     ])

@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import CtaMain from '../../buttons/CtaMain'
-import FormNewsletter from '../../form/FormNewsletter'
+import CtaMain from '@/components/buttons/CtaMain'
+import FormNewsletter from '@/components/form/FormNewsletter'
 
 type Props = {}
 
-export default function HeroRetail({}: Props) {
+export default function Hero({}: Props) {
   return (
     <section className="bg-background">
       <div className="container">

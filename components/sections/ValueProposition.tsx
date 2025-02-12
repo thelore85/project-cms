@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import CtaMain from '../../buttons/CtaMain'
+import CtaMain from '@/components/buttons/CtaMain'
 
 type Props = {}
 
-export default function ValuePropositionRetail({}: Props) {
+export default function ValueProposition({}: Props) {
   return (
     <section className="bg-background">
       <div className="container mb-20">
