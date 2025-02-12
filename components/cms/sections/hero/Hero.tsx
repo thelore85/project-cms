@@ -10,11 +10,12 @@ export default function HeroForm({section}: Props) {
   return (
     <section className="bg-background">
       <div className="container">
-        <div className="w-full bg-gradient rounded-lg px-10 py-5 border-2 border-black">
+        <div className="w-full bg-gradient rounded-lg md:px-10 p-5 border-2 border-black">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="font-bold mb-10 text-primary-foreground">{section.title}</h1>
-              <p className="text-3xl text-primary-foreground mb-10">{section.subtitle}</p>
+              <Image src={section?.image} priority alt="hero image" className="m-auto object-contain block lg:hidden mb-10" width={500} height={500} />
+              <h1 className="font-bold mb-10 text-primary-foreground text-4xl md:text-5xl">{section.title}</h1>
+              <p className="text-3xl text-primary-foreground mb-10 hidden md:block">{section.subtitle}</p>
               {section.buttonUrl && <Cta urlPath={section.buttonUrl} text={section.buttonLabel} />}
             </div>
 
