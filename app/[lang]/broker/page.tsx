@@ -5,7 +5,7 @@ import Faq from '@/components/sections/Faq'
 
 import HeroBroker from '@/components/sections/HeroBroker'
 import HowTo from '@/components/sections/HowTo'
-import PartnersBanner from '@/components/sections/PartnersBanner'
+import PartnersBannerLight from '@/components/sections/PartnersBannerLight'
 import Testimonials from '@/components/sections/Testimonials'
 
 export default async function Home() {
@@ -17,7 +17,7 @@ export default async function Home() {
           <HeroBroker />
           <CardTab />
           <HowTo />
-          <PartnersBanner />
+          <PartnersBannerLight />
           <CardLeft />
           <Testimonials />
           <Faq />
