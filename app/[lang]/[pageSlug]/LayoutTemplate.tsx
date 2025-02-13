@@ -1,8 +1,8 @@
-////////////// layoutTemplate
 import Footer from '@/components/sections/Footer'
-import NavigatorRetail from '@/components/navigations/retail/NavigatorRetail'
+import Navigator from '@/components/navigations/retail/Navigator'
 import NavigatorBroker from '@/components/navigations/broker/NavigatorBroker'
 import {getPageBySlug} from '@/sanity/sanity-utils'
+import FooterBroker from '@/components/sections/FooterBroker'
 
 type Props = {
   children: React.ReactNode
@@ -15,24 +15,33 @@ type Props = {
 export default async function LayoutTemplate({children, params}: Props) {
   const {lang, pageSlug} = params
 
-  // Fetch della pagina dal CMS
+  // Fetch page
   const page = await getPageBySlug(pageSlug, lang)
+  console.log(page)
+
   const template = page?.layout || 'default'
 
-  // Mappa dei layout: associa ad ogni valore il rispettivo componente
+  // Navigation menu map
   const navigators: {[key: string]: React.ComponentType<{lang: string}>} = {
-    retail: NavigatorRetail,
-    broker: NavigatorBroker,
+    main: Navigator,
+    business: NavigatorBroker,
   }
 
-  // Se non esiste un layout specifico, usa il default
-  const Navigator = navigators[template] || NavigatorRetail
+  // Footer map
+  const footers: {[key: string]: React.ComponentType<{lang: string}>} = {
+    main: Footer,
+    business: FooterBroker,
+  }
+
+  // Defaylt layout
+  const NavigatorComponent = navigators[template] || Navigator
+  const FooterComponent = footers[template] || Footer
 
   return (
     <>
-      <Navigator lang={lang} />
+      <NavigatorComponent lang={lang} />
       {children}
-      <Footer lang={lang} />
+      <FooterComponent lang={lang} />
     </>
   )
 }

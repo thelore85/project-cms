@@ -7,7 +7,7 @@ type Props = {
   lang: string
 }
 
-export default function NavigatorRetail({lang}: Props) {
+export default function Navigator({lang}: Props) {
   return (
     <div>
       {/* <div className="sticky top-0 z-50"> */}
