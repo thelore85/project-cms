@@ -58,7 +58,7 @@ export const pageType = {
       of: [
         {
           type: 'reference',
-          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}, {type: 'partnersBanner'}, {type: 'testimonial'}, {type: 'faq'}, {type: 'bigCardLeft'}],
+          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'heroBig'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}, {type: 'partnersBanner'}, {type: 'testimonial'}, {type: 'faq'}, {type: 'bigCardLeft'}],
         },
       ],
     },

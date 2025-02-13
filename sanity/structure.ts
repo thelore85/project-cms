@@ -75,6 +75,7 @@ export const structure: StructureResolver = S =>
             .title('Sections')
             .items([
               S.documentTypeListItem('hero').title('Hero'),
+              S.documentTypeListItem('heroBig').title('Hero Big'),
               S.documentTypeListItem('heroForm').title('Hero Form'),
               S.documentTypeListItem('service').title('service'),
               S.documentTypeListItem('value').title('value'),

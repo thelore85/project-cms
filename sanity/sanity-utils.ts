@@ -78,6 +78,13 @@ export async function getPageBySlug(title: string, lang: string) {
             "buttonUrl": button1.url,
           },
 
+          // Campi specifici per 'heroBig'
+          _type == "heroBig" => {
+            "image": image.asset->url,
+            "title": sectionTitle,
+            "subtitle": subtitle,
+          },
+
           // Campi specifici per 'hero form'
           _type == "heroForm" => {
             "image": image.asset->url,

@@ -12,28 +12,28 @@ type Props = {
   }
 }
 
+type MapProps = {[key: string]: React.ComponentType<{lang: string}>}
+
 export default async function LayoutTemplate({children, params}: Props) {
-  const {lang, pageSlug} = params
+  const {lang, pageSlug} = await params
 
   // Fetch page
   const page = await getPageBySlug(pageSlug, lang)
-  console.log(page)
-
   const template = page?.layout || 'default'
 
   // Navigation menu map
-  const navigators: {[key: string]: React.ComponentType<{lang: string}>} = {
+  const navigators: MapProps = {
     main: Navigator,
     business: NavigatorBroker,
   }
 
   // Footer map
-  const footers: {[key: string]: React.ComponentType<{lang: string}>} = {
+  const footers: MapProps = {
     main: Footer,
     business: FooterBroker,
   }
 
-  // Defaylt layout
+  // Layout attribution
   const NavigatorComponent = navigators[template] || Navigator
   const FooterComponent = footers[template] || Footer
 

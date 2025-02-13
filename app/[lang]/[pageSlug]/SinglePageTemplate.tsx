@@ -11,6 +11,7 @@ import PartnersBanner from '@/components/cms/sections/partners/PartnersBanner'
 import Testimonial from '@/components/cms/sections/testimonial/Testimonial'
 import Faq from '@/components/cms/sections/faq/Faq'
 import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
+import HeroBig from '@/components/cms/sections/hero/HeroBig'
 
 type PageProps = {
   slug: string
@@ -32,6 +33,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
 
   const componentMap: compMapProps = {
     hero: Hero,
+    heroBig: HeroBig,
     heroForm: HeroForm,
     service: Service,
     value: ValueProposition,
