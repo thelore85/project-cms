@@ -65,6 +65,7 @@ export async function getPageBySlug(title: string, lang: string) {
         _createdAt,
         body,
         "slug": slug.current,
+        layout,
         sections[] -> {
           _type,
 

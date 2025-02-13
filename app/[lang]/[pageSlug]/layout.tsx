@@ -1,19 +1,21 @@
-import Footer from '@/components/sections/Footer'
-import NavigatorRetail from '@/components/navigations/retail/NavigatorRetail'
+import LayoutTemplate from './LayoutTemplate'
 
 type Props = {
   children: React.ReactNode
-  params: any
+  params: {
+    lang: string
+    pageSlug: string
+  }
 }
 
-export default async function RetailLayout({children, params}: Props) {
-  const {lang} = await params
-
+export default async function PageLayout({children, params}: Props) {
   return (
     <>
-      <NavigatorRetail lang={lang} />
-      {children}
-      <Footer lang={lang} />
+      {/* ////////////////// */}
+      {/* Add metadata here  */}
+      {/* ////////////////// */}
+
+      <LayoutTemplate params={params}>{children}</LayoutTemplate>
     </>
   )
 }

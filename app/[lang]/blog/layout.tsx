@@ -1,5 +1,5 @@
 import Footer from '@/components/sections/Footer'
-import NavigatorRetail from '@/components/navigations/retail/NavigatorRetail'
+import NavigatorRetail from '@/components/navigations/retail/Navigator'
 
 type Props = {
   children: React.ReactNode

@@ -2,8 +2,11 @@ export const pageType = {
   name: 'page',
   type: 'document',
   title: 'Page',
+  fieldsets: [
+    {name: 'content', title: 'Content'},
+    {name: 'layout', title: 'Layout Settings'},
+  ],
   fields: [
-    // Campo language definito ma nascosto
     {
       name: 'language',
       type: 'string',
@@ -15,22 +18,43 @@ export const pageType = {
           {title: 'Spanish', value: 'es'},
         ],
       },
-      hidden: true, // Nasconde il campo dall'interfaccia dell'editor
+      hidden: true,
     },
+
     {
       name: 'title',
       type: 'string',
       title: 'Page Title',
+      fieldset: 'content',
     },
+
+    // Divider usando un fieldset
+    {
+      name: 'layout',
+      type: 'string',
+      title: 'Page Layout',
+      fieldset: 'layout',
+      options: {
+        list: [
+          {title: 'Main', value: 'main'},
+          {title: 'Business', value: 'business'},
+        ],
+      },
+      validation: (Rule: any) => Rule.required().error('You must select a layout'),
+    },
+
     {
       name: 'description',
       type: 'text',
       title: 'Page Description',
+      fieldset: 'layout',
     },
+
     {
       name: 'sections',
       type: 'array',
       title: 'Page Sections',
+      fieldset: 'layout',
       of: [
         {
           type: 'reference',
