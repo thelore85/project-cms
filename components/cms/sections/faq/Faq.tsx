@@ -11,8 +11,8 @@ export default function Faq({section}: Props) {
       <div className="container">
         <h2 className="font-bold text-center  text-6xl">{section.title}</h2>
         <div className="text-center my-28">
-          {section.cards.map((card: any) => (
-            <Accordion type="single" collapsible className="w-full">
+          {section.cards.map((card: any, index: number) => (
+            <Accordion key={index} type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-2xl">{card.title}</AccordionTrigger>
                 <AccordionContent className="text-lg">{card.content}</AccordionContent>

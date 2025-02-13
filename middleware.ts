@@ -27,7 +27,7 @@ export function middleware(req: NextRequest) {
   return NextResponse.redirect(newUrl)
 }
 
-// Configura il middleware solo per percorsi specifici
+// Escludi file statici e risorse di Next.js
 export const config = {
-  matcher: '/((?!_next|api|favicon.ico).*)', // Intercetta tutte le pagine, ma NON /api, /_next, ecc.
+  matcher: '/((?!_next/static|_next/image|_next|api|favicon.ico).*)',
 }
