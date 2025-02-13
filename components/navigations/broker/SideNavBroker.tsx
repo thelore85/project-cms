@@ -6,7 +6,7 @@ import {faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import CtaMain from '../../buttons/CtaMain'
-import CtaBroker from '../../buttons/CtaBroker'
+import CtaRetail from '@/components/buttons/CtaRetail'
 
 type Props = {
   lang: string
@@ -64,7 +64,7 @@ export default function SideNavBroker({lang}: Props) {
             <div className="mb-5">
               <CtaMain />
             </div>
-            <CtaBroker />
+            <CtaRetail />
           </div>
         </div>
       )}
