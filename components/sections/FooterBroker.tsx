@@ -3,6 +3,7 @@ import {faEnvelope, faLocation, faLocationDot, faX} from '@fortawesome/free-soli
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
+import LangSelector from '@/components/utility/LangSelector'
 
 type Props = {
   lang: string
@@ -18,6 +19,7 @@ export default function FooterBroker({lang}: Props) {
             <Link href={`/${lang}/broker`} className="block text-4xl font-bold">
               Zeeguros
             </Link>
+            <LangSelector />
           </div>
           <div className="p-10 w-1/3">
             <p className="font-bold text-xl mb-10">Contacts</p>
