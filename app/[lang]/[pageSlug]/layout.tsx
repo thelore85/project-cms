@@ -7,7 +7,9 @@ type Props = {
 }
 
 export default async function RetailLayout({children, params}: Props) {
-  const {lang} = await params
+  const {lang, pageSlug} = await params
+
+  console.log('///////// page slug: layout: ', pageSlug)
 
   return (
     <>
