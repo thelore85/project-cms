@@ -13,7 +13,7 @@ export default function CardTab() {
           <h2 className="text-center w-full m-auto font-bold text-6xl">¿Por qué trabajar con nosotros?</h2>
         </div>
 
-        {/* TABS */}
+        {/* CARD - TABS */}
         <div className="flex gap-4 justify-between bg-white rounded-full border-2 border-black mb-5 px-4 md:px-64 py-2 overflow-x-scroll overflow-hidden">
           {tabs.map((tab, index) => (
             <div
