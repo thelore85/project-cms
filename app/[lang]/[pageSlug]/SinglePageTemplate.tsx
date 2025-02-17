@@ -7,7 +7,7 @@ import ValueProposition from '@/components/cms/sections/valueProp/ValuePropositi
 import Service from '@/components/cms/sections/valueProp/Service'
 import Error404 from '@/components/sections/Error404'
 import HowTo from '@/components/cms/sections/howToRetail/HowTo'
-import PartnersBanner from '@/components/cms/sections/partners/PartnersBanner'
+import LogoStrip from '@/components/cms/sections/LogoStrip/LogoStrip'
 import Testimonial from '@/components/cms/sections/testimonial/Testimonial'
 import Faq from '@/components/cms/sections/faq/Faq'
 import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
@@ -38,7 +38,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     service: Service,
     value: ValueProposition,
     howTo: HowTo,
-    partnersBanner: PartnersBanner,
+    logoStrip: LogoStrip,
     testimonial: Testimonial,
     faq: Faq,
     bigCardLeft: BigCardLeft,

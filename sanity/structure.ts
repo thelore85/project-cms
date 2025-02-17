@@ -96,7 +96,7 @@ export const structure: StructureResolver = S =>
                   S.list()
                     .title('Utility')
                     .items([
-                      S.documentTypeListItem('partnersBanner').title('Partners Banner'),
+                      S.documentTypeListItem('logoStrip').title('Logo Strip'),
                       S.documentTypeListItem('testimonial').title('Testimonial'),
                       S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
                     ]),

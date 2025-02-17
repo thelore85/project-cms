@@ -106,8 +106,8 @@ export async function getPageBySlug(title: string, lang: string) {
             "step3Image": step3.image.asset->url
           },
 
-          // Campi specifici per 'Partners Banner'
-          _type == "partnersBanner" => {
+          // Campi specifici per 'Logo Strip'
+          _type == "logoStrip" => {
             "title": title,
             "logos": partnersLogo[] {
               "image": image.asset->url

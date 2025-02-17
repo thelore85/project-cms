@@ -1,5 +1,5 @@
-export const partnersBannerType = {
-  name: 'partnersBanner',
+export const logoStripType = {
+  name: 'logoStrip',
   title: 'Partners Banner',
   type: 'document',
   fields: [
@@ -11,7 +11,7 @@ export const partnersBannerType = {
     {
       name: 'partnersLogo',
       type: 'array',
-      title: 'Partners Logo',
+      title: 'Logo',
       of: [
         {
           type: 'object',
