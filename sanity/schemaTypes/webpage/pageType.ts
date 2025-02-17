@@ -80,6 +80,13 @@ export const pageType = {
           to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'heroBig'}],
         },
         {
+          name: 'mainContents',
+          type: 'reference',
+          title: 'Main Contents',
+          fieldset: 'mainContents',
+          to: [{type: 'paragraph'}],
+        },
+        {
           name: 'interactiveSections',
           type: 'reference',
           title: 'Interactive Sections',
@@ -96,6 +103,7 @@ export const pageType = {
       ],
       fieldsets: [
         {name: 'hero', title: 'Hero Sections'},
+        {name: 'mainContents', title: 'Main Contents'},
         {name: 'interactive', title: 'Interactive Comps.'},
         {name: 'cards', title: 'Cards'},
       ],

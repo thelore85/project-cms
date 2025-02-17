@@ -11,6 +11,7 @@ import Faq from '@/components/cms/sections/faq/Faq'
 import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
 import HeroBig from '@/components/cms/sections/hero/HeroBig'
 import CardSlider from '@/components/cms/sections/cards/CardSlider'
+import Paragraph from '@/components/cms/sections/mainContents/Paragraph'
 
 type PageProps = {
   slug: string
@@ -40,6 +41,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     cardSlider: CardSlider,
     faq: Faq,
     bigCardLeft: BigCardLeft,
+    paragraph: Paragraph,
   }
 
   if (!page || !page.sections) {

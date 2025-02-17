@@ -151,6 +151,15 @@ export async function getPageBySlug(title: string, lang: string) {
             "content": content,
           },
 
+          ///////////////////////////////////////////////
+          //// MAIN CONTENTS
+
+          // Campi specifici per 'paragraph'
+          _type == "paragraph" => {
+            "title": title,
+            "content": content,
+          },
+
         }
       }`,
     {title, lang},
