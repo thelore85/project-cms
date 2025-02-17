@@ -5,10 +5,9 @@ type Props = {
 }
 
 export default function Paragraph({section}: Props) {
-  console.log('j//////////// paragraph debug:', section)
   return (
     <section className="container">
-      <h3 className="text-2xl font-bold">{section.title}</h3>
+      <h3 className="text-3xl font-bold mb-8">{section.title}</h3>
       <p>{section.content}</p>
     </section>
   )

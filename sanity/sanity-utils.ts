@@ -159,6 +159,12 @@ export async function getPageBySlug(title: string, lang: string) {
             "title": title,
             "content": content,
           },
+          // Campi specifici per 'paragraphImageRight'
+          _type == "paragraphImageRight" => {
+            "title": title,
+            "columnLeft": columnLeft,
+            "image": image.asset->url,
+          },
 
         }
       }`,

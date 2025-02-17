@@ -87,7 +87,10 @@ export const structure: StructureResolver = S =>
                 .child(
                   S.list()
                     .title('Main Content')
-                    .items([S.documentTypeListItem('paragraph').title('Paragraph Simple')]),
+                    .items([
+                      S.documentTypeListItem('paragraph').title('Paragraph Simple'),
+                      S.documentTypeListItem('paragraphImageRight').title('Paragraph Image Right'),
+                    ]),
                 ),
               S.listItem()
                 .title('Interactive Components')

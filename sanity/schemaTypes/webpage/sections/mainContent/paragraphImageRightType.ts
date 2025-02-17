@@ -1,8 +1,8 @@
 // schemas/hero.ts
-export const paragraphType = {
-  name: 'paragraph',
+export const paragraphImageRight = {
+  name: 'paragraphImageRight',
   type: 'document',
-  title: 'Paragraph Simple',
+  title: 'Paragraph Image Right',
   fields: [
     {
       name: 'previewTitle',
@@ -17,15 +17,22 @@ export const paragraphType = {
       title: 'Title',
     },
     {
-      name: 'content',
-      title: 'Content',
+      name: 'columnLeft',
+      title: 'Column Left',
       type: 'text',
+    },
+    {
+      name: 'image',
+      title: 'Image Right',
+      description: 'Recommended size: 400x400',
+      type: 'image',
     },
   ],
   preview: {
     select: {
       title: 'previewTitle',
-      content: 'content',
+      image: 'image',
+      content: 'columnLeft',
     },
   },
 }

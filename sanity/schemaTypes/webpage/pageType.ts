@@ -84,7 +84,7 @@ export const pageType = {
           type: 'reference',
           title: 'Main Contents',
           fieldset: 'mainContents',
-          to: [{type: 'paragraph'}],
+          to: [{type: 'paragraph'}, {type: 'paragraphImageRight'}],
         },
         {
           name: 'interactiveSections',

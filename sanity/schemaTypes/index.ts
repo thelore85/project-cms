@@ -15,6 +15,7 @@ import {bigCardLeftType} from './webpage/sections/cards/bigCardLeftType'
 import {heroBigType} from './webpage/sections/hero/heroBigType'
 import {cardFeatureType} from './webpage/sections/cards/cardFeatureType'
 import {paragraphType} from './webpage/sections/mainContent/paragraphType'
+import {paragraphImageRight} from './webpage/sections/mainContent/paragraphImageRightType'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
@@ -33,5 +34,6 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     faqType,
     bigCardLeftType,
     paragraphType,
+    paragraphImageRight,
   ],
 }
