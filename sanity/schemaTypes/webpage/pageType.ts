@@ -91,7 +91,7 @@ export const pageType = {
           type: 'reference',
           title: 'Utility Sections',
           fieldset: 'utility',
-          to: [{type: 'logoStrip'}, {type: 'testimonial'}, {type: 'bigCardLeft'}],
+          to: [{type: 'logoStrip'}, {type: 'cardSlider'}, {type: 'bigCardLeft'}],
         },
       ],
       fieldsets: [

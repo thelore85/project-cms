@@ -11,7 +11,7 @@ import {serviceType} from './webpage/sections/serviceType'
 import {valueType} from './webpage/sections/valueType'
 import {howToType} from './webpage/sections/howToType'
 import {logoStripType} from './webpage/sections/logoStripType'
-import {testimonialType} from './webpage/sections/testimonialType'
+import {cardSliderType} from './webpage/sections/cardSliderType'
 import {faqType} from './webpage/sections/faqType'
 import {bigCardLeftType} from './webpage/sections/bigCardLeftType'
 import {heroBigType} from './webpage/sections/heroBigType'
@@ -30,7 +30,7 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     valueType,
     howToType,
     logoStripType,
-    testimonialType,
+    cardSliderType,
     faqType,
     bigCardLeftType,
   ],

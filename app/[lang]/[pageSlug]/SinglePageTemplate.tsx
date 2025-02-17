@@ -8,10 +8,10 @@ import Service from '@/components/cms/sections/valueProp/Service'
 import Error404 from '@/components/sections/Error404'
 import HowTo from '@/components/cms/sections/howToRetail/HowTo'
 import LogoStrip from '@/components/cms/sections/LogoStrip/LogoStrip'
-import Testimonial from '@/components/cms/sections/testimonial/Testimonial'
 import Faq from '@/components/cms/sections/faq/Faq'
 import BigCardLeft from '@/components/cms/sections/cards/BigCardLeft'
 import HeroBig from '@/components/cms/sections/hero/HeroBig'
+import CardSlider from '@/components/cms/sections/cards/CardSlider'
 
 type PageProps = {
   slug: string
@@ -39,7 +39,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     value: ValueProposition,
     howTo: HowTo,
     logoStrip: LogoStrip,
-    testimonial: Testimonial,
+    cardSlider: CardSlider,
     faq: Faq,
     bigCardLeft: BigCardLeft,
   }

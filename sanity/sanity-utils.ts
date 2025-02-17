@@ -114,10 +114,10 @@ export async function getPageBySlug(title: string, lang: string) {
             }
           },
 
-          // Campi specifici per 'Testimonial'
-          _type == "testimonial" => {
+          // Campi specifici per 'Card Slider'
+          _type == "cardSlider" => {
             "title": title,
-             "cards": testimonialCards[] {
+             "cards": cardSlider[] {
               "description": description,
               "image": image.asset->url
             }

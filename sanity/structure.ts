@@ -91,14 +91,14 @@ export const structure: StructureResolver = S =>
                     ]),
                 ),
               S.listItem()
-                .title('Utility')
+                .title('Cards')
                 .child(
                   S.list()
-                    .title('Utility')
+                    .title('Cards')
                     .items([
                       S.documentTypeListItem('logoStrip').title('Logo Strip'),
-                      S.documentTypeListItem('testimonial').title('Testimonial'),
-                      S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
+                      S.documentTypeListItem('cardSlider').title('Card Slider'),
+                      S.documentTypeListItem('bigCardLeft').title('Big-Card Left'),
                     ]),
                 ),
             ]),
