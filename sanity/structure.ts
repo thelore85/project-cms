@@ -64,9 +64,6 @@ export const structure: StructureResolver = S =>
             ]),
         ),
 
-      // Sezione "Pages"
-      // S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
-
       // Sezione "Components"
       S.listItem()
         .title('Sections')
@@ -74,15 +71,36 @@ export const structure: StructureResolver = S =>
           S.list()
             .title('Sections')
             .items([
-              S.documentTypeListItem('hero').title('Hero'),
-              S.documentTypeListItem('heroForm').title('Hero Form'),
-              S.documentTypeListItem('service').title('service'),
-              S.documentTypeListItem('value').title('value'),
-              S.documentTypeListItem('howTo').title('Hot To'),
-              S.documentTypeListItem('partnersBanner').title('Partners Banner'),
-              S.documentTypeListItem('testimonial').title('Testimonial'),
-              S.documentTypeListItem('faq').title('F.A.Q.'),
-              S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
+              S.listItem()
+                .title('Hero')
+                .child(
+                  S.list()
+                    .title('Hero')
+                    .items([
+                      S.documentTypeListItem('hero').title('Hero'),
+                      S.documentTypeListItem('heroBig').title('Hero Big'),
+                      S.documentTypeListItem('heroForm').title('Hero Form'),
+                    ]),
+                ),
+              S.listItem()
+                .title('Interactive Components')
+                .child(
+                  S.list()
+                    .title('Interactive Comps.')
+                    .items([S.documentTypeListItem('logoStrip').title('Logo Strip'), S.documentTypeListItem('faq').title('F.A.Q.')]),
+                ),
+              S.listItem()
+                .title('Cards')
+                .child(
+                  S.list()
+                    .title('Cards')
+                    .items([
+                      S.documentTypeListItem('howTo').title('How To'),
+                      S.documentTypeListItem('cardFeature').title('Feature Cards'),
+                      S.documentTypeListItem('cardSlider').title('Slider Cards'),
+                      S.documentTypeListItem('bigCardLeft').title('Big-Card Left'),
+                    ]),
+                ),
             ]),
         ),
     ])

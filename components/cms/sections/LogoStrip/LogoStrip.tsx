@@ -9,7 +9,7 @@ type LogoProps = {
   image: string
 }
 
-export default function PartnersBanner({section}: Props) {
+export default function LogoStrip({section}: Props) {
   return (
     <section className="bg-gradient py-10">
       <div className="flex gap-10 justify-between overflow-x-scroll overflow-hidden py-10">

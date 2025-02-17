@@ -7,14 +7,30 @@ import {authorType} from './blog/authorType'
 import {pageType} from './webpage/pageType'
 import {heroType} from './webpage/sections/heroType'
 import {heroFormType} from './webpage/sections/heroFormType'
-import {serviceType} from './webpage/sections/serviceType'
-import {valueType} from './webpage/sections/valueType'
+
 import {howToType} from './webpage/sections/howToType'
-import {partnersBannerType} from './webpage/sections/partnersBannerType'
-import {testimonialType} from './webpage/sections/testimonialType'
+import {logoStripType} from './webpage/sections/logoStripType'
+import {cardSliderType} from './webpage/sections/cardSliderType'
 import {faqType} from './webpage/sections/faqType'
 import {bigCardLeftType} from './webpage/sections/bigCardLeftType'
+import {heroBigType} from './webpage/sections/heroBigType'
+import {cardFeatureType} from './webpage/sections/cardFeatureType'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
-  types: [blockContentType, categoryType, postType, authorType, pageType, heroType, serviceType, valueType, howToType, heroFormType, partnersBannerType, testimonialType, faqType, bigCardLeftType],
+  types: [
+    heroType,
+    heroFormType,
+    heroBigType,
+    blockContentType,
+    categoryType,
+    postType,
+    authorType,
+    pageType,
+    cardFeatureType,
+    howToType,
+    logoStripType,
+    cardSliderType,
+    faqType,
+    bigCardLeftType,
+  ],
 }

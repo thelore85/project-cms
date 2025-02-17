@@ -5,7 +5,7 @@ type Props = {
   section: any
 }
 
-export default function Testimonial({section}: Props) {
+export default function CardSlider({section}: Props) {
   return (
     <section id="testimonials" className="bg-background">
       <div className=" my-20">

@@ -4,7 +4,8 @@ type Props = {
   section: any
 }
 
-export default function ValueProposition({section}: Props) {
+export default function CardFeature({section}: Props) {
+  console.log('///////// card feature; ', section)
   return (
     <section className="bg-background">
       <div className="container mb-20">

@@ -23,12 +23,27 @@ export const pageType = {
 
     {
       name: 'title',
+      description: 'Give it a name to save the page in CMS',
       type: 'string',
       title: 'Page Title',
       fieldset: 'content',
     },
 
-    // Divider usando un fieldset
+    {
+      name: 'pageSlug',
+      description: 'this will be the URL path name.',
+      type: 'string',
+      title: 'Page Slug',
+      fieldset: 'content',
+      validation: (Rule: any) =>
+        Rule.required()
+          .error('You must select a layout')
+          .regex(/^[a-z]+$/, {
+            name: 'lowercaseOnly',
+            message: 'Il campo deve contenere solo lettere minuscole senza spazi',
+          }),
+    },
+
     {
       name: 'layout',
       type: 'string',
@@ -45,7 +60,8 @@ export const pageType = {
 
     {
       name: 'description',
-      type: 'text',
+      description: 'SEO description - metadata',
+      type: 'string',
       title: 'Page Description',
       fieldset: 'layout',
     },
@@ -57,9 +73,31 @@ export const pageType = {
       fieldset: 'layout',
       of: [
         {
+          name: 'heroSections',
           type: 'reference',
-          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'service'}, {type: 'value'}, {type: 'howTo'}, {type: 'partnersBanner'}, {type: 'testimonial'}, {type: 'faq'}, {type: 'bigCardLeft'}],
+          title: 'Hero Sections',
+          fieldset: 'hero',
+          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'heroBig'}],
         },
+        {
+          name: 'interactiveSections',
+          type: 'reference',
+          title: 'Interactive Sections',
+          fieldset: 'interactive',
+          to: [{type: 'faq'}, {type: 'logoStrip'}],
+        },
+        {
+          name: 'cardsSections',
+          type: 'reference',
+          title: 'Cards Sections',
+          fieldset: 'cards',
+          to: [{type: 'cardSlider'}, {type: 'bigCardLeft'}, {type: 'cardFeature'}, {type: 'howTo'}],
+        },
+      ],
+      fieldsets: [
+        {name: 'hero', title: 'Hero Sections'},
+        {name: 'interactive', title: 'Interactive Comps.'},
+        {name: 'cards', title: 'Cards'},
       ],
     },
   ],

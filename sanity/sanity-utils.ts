@@ -60,7 +60,7 @@ export async function getPost(slug: string) {
 export async function getPageBySlug(title: string, lang: string) {
   return await client.fetch(
     groq`
-      *[_type == "page" && title == $title && language == $lang][0]{
+      *[_type == "page" && pageSlug == $title && language == $lang][0]{
         title,
         _createdAt,
         body,
@@ -76,6 +76,13 @@ export async function getPageBySlug(title: string, lang: string) {
             "subtitle": subtitle,
             "buttonLabel": button1.label,
             "buttonUrl": button1.url,
+          },
+
+          // Campi specifici per 'heroBig'
+          _type == "heroBig" => {
+            "image": image.asset->url,
+            "title": sectionTitle,
+            "subtitle": subtitle,
           },
 
           // Campi specifici per 'hero form'
@@ -99,18 +106,18 @@ export async function getPageBySlug(title: string, lang: string) {
             "step3Image": step3.image.asset->url
           },
 
-          // Campi specifici per 'Partners Banner'
-          _type == "partnersBanner" => {
+          // Campi specifici per 'Logo Strip'
+          _type == "logoStrip" => {
             "title": title,
             "logos": partnersLogo[] {
               "image": image.asset->url
             }
           },
 
-          // Campi specifici per 'Testimonial'
-          _type == "testimonial" => {
+          // Campi specifici per 'Card Slider'
+          _type == "cardSlider" => {
             "title": title,
-             "cards": testimonialCards[] {
+             "cards": cardSlider[] {
               "description": description,
               "image": image.asset->url
             }
@@ -125,10 +132,10 @@ export async function getPageBySlug(title: string, lang: string) {
             }
           },
 
-          // Campi specifici per 'value'
-          _type == "value" => {
+          // Campi specifici per 'Card Feature'
+          _type == "cardFeature" => {
             "title": sectionTitle,
-            "cards": serviceCards[] {
+            "cards": cardFeature[] {
               "title": title,
               "description": description,
               "image": image.asset->url

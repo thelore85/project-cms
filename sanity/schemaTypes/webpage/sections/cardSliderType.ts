@@ -1,6 +1,6 @@
-export const testimonialType = {
-  name: 'testimonial',
-  title: 'Testimonial Section',
+export const cardSliderType = {
+  name: 'cardSlider',
+  title: 'Card Slider',
   type: 'document',
   fields: [
     {
@@ -16,9 +16,9 @@ export const testimonialType = {
       title: 'Title',
     },
     {
-      name: 'testimonialCards',
+      name: 'cardSlider',
       type: 'array',
-      title: 'testimonial Cards',
+      title: 'Cards',
       of: [
         {
           type: 'object',
