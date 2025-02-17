@@ -5,16 +5,17 @@ import {categoryType} from './blog/categoryType'
 import {postType} from './blog/postType'
 import {authorType} from './blog/authorType'
 import {pageType} from './webpage/pageType'
-import {heroType} from './webpage/sections/heroType'
-import {heroFormType} from './webpage/sections/heroFormType'
-
+import {heroType} from './webpage/sections/hero/heroType'
+import {heroFormType} from './webpage/sections/hero/heroFormType'
 import {howToType} from './webpage/sections/howToType'
-import {logoStripType} from './webpage/sections/logoStripType'
-import {cardSliderType} from './webpage/sections/cardSliderType'
-import {faqType} from './webpage/sections/faqType'
-import {bigCardLeftType} from './webpage/sections/bigCardLeftType'
-import {heroBigType} from './webpage/sections/heroBigType'
-import {cardFeatureType} from './webpage/sections/cardFeatureType'
+import {logoStripType} from './webpage/sections/interactive/logoStripType'
+import {cardSliderType} from './webpage/sections/cards/cardSliderType'
+import {faqType} from './webpage/sections/interactive/faqType'
+import {bigCardLeftType} from './webpage/sections/cards/bigCardLeftType'
+import {heroBigType} from './webpage/sections/hero/heroBigType'
+import {cardFeatureType} from './webpage/sections/cards/cardFeatureType'
+import {paragraphType} from './webpage/sections/mainContent/paragraphType'
+import {paragraphImageRight} from './webpage/sections/mainContent/paragraphImageRightType'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
@@ -32,5 +33,7 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     cardSliderType,
     faqType,
     bigCardLeftType,
+    paragraphType,
+    paragraphImageRight,
   ],
 }
