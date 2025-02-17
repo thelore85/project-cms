@@ -60,7 +60,7 @@ export async function getPost(slug: string) {
 export async function getPageBySlug(title: string, lang: string) {
   return await client.fetch(
     groq`
-      *[_type == "page" && title == $title && language == $lang][0]{
+      *[_type == "page" && pageSlug == $title && language == $lang][0]{
         title,
         _createdAt,
         body,

@@ -64,9 +64,6 @@ export const structure: StructureResolver = S =>
             ]),
         ),
 
-      // Sezione "Pages"
-      // S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
-
       // Sezione "Components"
       S.listItem()
         .title('Sections')
@@ -74,16 +71,36 @@ export const structure: StructureResolver = S =>
           S.list()
             .title('Sections')
             .items([
-              S.documentTypeListItem('hero').title('Hero'),
-              S.documentTypeListItem('heroBig').title('Hero Big'),
-              S.documentTypeListItem('heroForm').title('Hero Form'),
-              S.documentTypeListItem('service').title('service'),
-              S.documentTypeListItem('value').title('value'),
-              S.documentTypeListItem('howTo').title('Hot To'),
-              S.documentTypeListItem('partnersBanner').title('Partners Banner'),
-              S.documentTypeListItem('testimonial').title('Testimonial'),
-              S.documentTypeListItem('faq').title('F.A.Q.'),
-              S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
+              S.listItem()
+                .title('Hero')
+                .child(
+                  S.list()
+                    .title('Hero')
+                    .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('heroBig').title('Hero Big'), S.documentTypeListItem('heroForm').title('Hero Form')]),
+                ),
+              S.listItem()
+                .title('Services')
+                .child(
+                  S.list()
+                    .title('Services')
+                    .items([
+                      S.documentTypeListItem('service').title('Service'),
+                      S.documentTypeListItem('value').title('Value'),
+                      S.documentTypeListItem('howTo').title('How To'),
+                      S.documentTypeListItem('faq').title('F.A.Q.'),
+                    ]),
+                ),
+              S.listItem()
+                .title('Utility')
+                .child(
+                  S.list()
+                    .title('Utility')
+                    .items([
+                      S.documentTypeListItem('partnersBanner').title('Partners Banner'),
+                      S.documentTypeListItem('testimonial').title('Testimonial'),
+                      S.documentTypeListItem('bigCardLeft').title('BigCardLeft'),
+                    ]),
+                ),
             ]),
         ),
     ])

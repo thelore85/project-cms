@@ -6,10 +6,7 @@ import FooterBroker from '@/components/sections/FooterBroker'
 
 type Props = {
   children: React.ReactNode
-  params: {
-    lang: string
-    pageSlug: string
-  }
+  params: any
 }
 
 type MapProps = {[key: string]: React.ComponentType<{lang: string}>}

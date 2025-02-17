@@ -31,17 +31,10 @@ export const pageType = {
 
     {
       name: 'pageSlug',
-      description: 'this will be the URL path name.',
+      description: 'URL path name.',
       type: 'string',
       title: 'Page Slug',
       fieldset: 'content',
-      validation: (Rule: any) =>
-        Rule.required()
-          .error('You must select a layout')
-          .regex(/^[a-z]+$/, {
-            name: 'lowercaseOnly',
-            message: 'Il campo deve contenere solo lettere minuscole senza spazi',
-          }),
     },
 
     {
