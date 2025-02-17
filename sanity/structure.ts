@@ -76,19 +76,18 @@ export const structure: StructureResolver = S =>
                 .child(
                   S.list()
                     .title('Hero')
-                    .items([S.documentTypeListItem('hero').title('Hero'), S.documentTypeListItem('heroBig').title('Hero Big'), S.documentTypeListItem('heroForm').title('Hero Form')]),
+                    .items([
+                      S.documentTypeListItem('hero').title('Hero'),
+                      S.documentTypeListItem('heroBig').title('Hero Big'),
+                      S.documentTypeListItem('heroForm').title('Hero Form'),
+                    ]),
                 ),
               S.listItem()
-                .title('Services')
+                .title('Interactive Components')
                 .child(
                   S.list()
-                    .title('Services')
-                    .items([
-                      S.documentTypeListItem('service').title('Service'),
-                      S.documentTypeListItem('value').title('Value'),
-                      S.documentTypeListItem('howTo').title('How To'),
-                      S.documentTypeListItem('faq').title('F.A.Q.'),
-                    ]),
+                    .title('Interactive Comps.')
+                    .items([S.documentTypeListItem('logoStrip').title('Logo Strip'), S.documentTypeListItem('faq').title('F.A.Q.')]),
                 ),
               S.listItem()
                 .title('Cards')
@@ -96,8 +95,9 @@ export const structure: StructureResolver = S =>
                   S.list()
                     .title('Cards')
                     .items([
-                      S.documentTypeListItem('logoStrip').title('Logo Strip'),
-                      S.documentTypeListItem('cardSlider').title('Card Slider'),
+                      S.documentTypeListItem('howTo').title('How To'),
+                      S.documentTypeListItem('cardFeature').title('Feature Cards'),
+                      S.documentTypeListItem('cardSlider').title('Slider Cards'),
                       S.documentTypeListItem('bigCardLeft').title('Big-Card Left'),
                     ]),
                 ),

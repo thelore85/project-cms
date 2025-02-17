@@ -1,20 +1,22 @@
-export const serviceType = {
-  name: 'service',
-  title: 'Service Section',
+export const cardFeatureType = {
+  name: 'cardFeature',
+  title: 'Card Feture',
   type: 'document',
   fields: [
     {
+      name: 'previewTitle',
+      description: 'Use this field for Sanity studio preview',
+      type: 'string',
+      title: 'Preview Title',
+    },
+    {
       name: 'sectionTitle',
+      description: 'This is the h1 title renderd in the page',
       type: 'string',
       title: 'Section Title',
     },
     {
-      name: 'sectionSubtitle',
-      type: 'string',
-      title: 'Section Subtitle',
-    },
-    {
-      name: 'serviceCards',
+      name: 'cardFeature',
       type: 'array',
       title: 'Service Cards',
       of: [
@@ -53,7 +55,7 @@ export const serviceType = {
   ],
   preview: {
     select: {
-      title: 'sectionTitle',
+      title: 'previewTitle',
       subtitle: 'sectionSubtitle',
     },
   },

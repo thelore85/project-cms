@@ -132,10 +132,10 @@ export async function getPageBySlug(title: string, lang: string) {
             }
           },
 
-          // Campi specifici per 'value'
-          _type == "value" => {
+          // Campi specifici per 'Card Feature'
+          _type == "cardFeature" => {
             "title": sectionTitle,
-            "cards": serviceCards[] {
+            "cards": cardFeature[] {
               "title": title,
               "description": description,
               "image": image.asset->url

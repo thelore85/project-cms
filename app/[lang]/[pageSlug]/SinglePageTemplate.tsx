@@ -3,8 +3,7 @@ import {getPageBySlug} from '@/sanity/sanity-utils'
 // Components
 import Hero from '@/components/cms/sections/hero/Hero'
 import HeroForm from '@/components/cms/sections/hero/HeroForm'
-import ValueProposition from '@/components/cms/sections/valueProp/ValueProposition'
-import Service from '@/components/cms/sections/valueProp/Service'
+import CardFeature from '@/components/cms/sections/cards/CardFeature'
 import Error404 from '@/components/sections/Error404'
 import HowTo from '@/components/cms/sections/howToRetail/HowTo'
 import LogoStrip from '@/components/cms/sections/LogoStrip/LogoStrip'
@@ -35,8 +34,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     hero: Hero,
     heroBig: HeroBig,
     heroForm: HeroForm,
-    service: Service,
-    value: ValueProposition,
+    cardFeature: CardFeature,
     howTo: HowTo,
     logoStrip: LogoStrip,
     cardSlider: CardSlider,
