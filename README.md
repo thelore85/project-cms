@@ -60,3 +60,5 @@ Un archivo .env.template está disponible en el repositorio. Renombrarlo a .env.
 - Expansión del CMS: agregar páginas multilingües para las landing pages
 - Optimización SEO: mejorar los metadatos y estrategias SEO para cada versión lingüística
 - Mejoras UI/UX: integración de animaciones avanzadas y mejoras gráficas
+- Desplegar en un arquitectura de Contenedores
+- Necesitamos Dockerizar la aplicación
