@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CtaMain from '@/components/buttons/CtaMain'
+import CtaMain from '@/components/static/buttons/CtaMain'
 import FormNewsletter from '@/components/form/FormNewsletter'
 
 type Props = {}
@@ -12,12 +12,20 @@ export default function Hero({}: Props) {
           <div className="flex justify-between items-center">
             <div>
               <h1 className="font-bold mb-10 text-primary-foreground">Consigue renovar más barato tu seguro de coche o moto online.</h1>
-              <p className="text-3xl text-primary-foreground mb-10">Compara precios… No No! Creamos un seguro especialmente para ti porque te quiero</p>
+              <p className="text-3xl text-primary-foreground mb-10">
+                Compara precios… No No! Creamos un seguro especialmente para ti porque te quiero
+              </p>
               {/* <CtaMain /> */}
               <FormNewsletter />
             </div>
 
-            <Image src="/img/components/hero/hero_img.png" alt="hero image" className="w-[500px] h-[500px] object-contain hidden lg:block" width={500} height={500} />
+            <Image
+              src="/img/components/hero/hero_img.png"
+              alt="hero image"
+              className="w-[500px] h-[500px] object-contain hidden lg:block"
+              width={500}
+              height={500}
+            />
           </div>
         </div>
       </div>

@@ -5,8 +5,8 @@ import LogoBlackBroker from './LogoBlackBroker'
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import CtaMain from '../../buttons/CtaMain'
-import CtaRetail from '@/components/buttons/CtaRetail'
+import CtaMain from '@/components/static/buttons/CtaMain'
+import CtaRetail from '@/components/static/buttons/CtaRetail'
 
 type Props = {
   lang: string

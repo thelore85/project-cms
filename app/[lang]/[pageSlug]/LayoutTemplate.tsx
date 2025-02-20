@@ -1,8 +1,8 @@
-import Footer from '@/components/sections/Footer'
+import Footer from '@/components/static/sections/Footer'
 import Navigator from '@/components/navigations/retail/Navigator'
 import NavigatorBroker from '@/components/navigations/broker/NavigatorBroker'
 import {getPageBySlug} from '@/sanity/sanity-utils'
-import FooterBroker from '@/components/sections/FooterBroker'
+import FooterBroker from '@/components/static/sections/FooterBroker'
 
 type Props = {
   children: React.ReactNode

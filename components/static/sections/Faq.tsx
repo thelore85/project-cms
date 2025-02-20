@@ -1,6 +1,6 @@
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion'
 import React from 'react'
-import CtaMain from '@/components/buttons/CtaMain'
+import CtaMain from '@/components/static/buttons/CtaMain'
 
 type Props = {}
 

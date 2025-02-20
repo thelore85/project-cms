@@ -1,4 +1,4 @@
-import Footer from '@/components/sections/Footer'
+import Footer from '@/components/static/sections/Footer'
 import NavigatorRetail from '@/components/navigations/retail/Navigator'
 
 type Props = {

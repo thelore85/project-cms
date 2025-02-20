@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CtaMain from '@/components/buttons/CtaMain'
+import CtaMain from '@/components/static/buttons/CtaMain'
 
 type Props = {}
 
@@ -14,7 +14,13 @@ export default function ValueProposition({}: Props) {
           {/* CARD  */}
           <div className="bg-white border-2 mb-4 border-black p-3 rounded-xl shadow-flat w-full m-auto">
             <div className="xl:flex justify-between items-center">
-              <Image className="w-[120px] h-[120px] m-auto md:m-0" width={250} height={250} src="/img/components/valueProposition/value1_img.png" alt="good" />
+              <Image
+                className="w-[120px] h-[120px] m-auto md:m-0"
+                width={250}
+                height={250}
+                src="/img/components/valueProposition/value1_img.png"
+                alt="good"
+              />
               <h3 className="inline-block px-4 py-2 rounded-md text-black">Mejora asegurada</h3>
             </div>
             <div className="rounded-lg p-5 text-white bg-primary flex justify-between items-center">
@@ -24,7 +30,13 @@ export default function ValueProposition({}: Props) {
           </div>
           <div className="bg-white border-2 mb-4 border-black p-3 rounded-xl shadow-flat w-full m-auto">
             <div className="xl:flex justify-between items-center">
-              <Image className="w-[150px] h-[120px] m-auto md:m-0" width={250} height={250} src="/img/components/valueProposition/value2_img.png" alt="good" />
+              <Image
+                className="w-[150px] h-[120px] m-auto md:m-0"
+                width={250}
+                height={250}
+                src="/img/components/valueProposition/value2_img.png"
+                alt="good"
+              />
               <h3 className="inline-block px-4 py-2 rounded-md text-black">Centralizado</h3>
             </div>
             <div className="rounded-lg p-5 text-white bg-primary flex justify-between items-center">
@@ -34,7 +46,13 @@ export default function ValueProposition({}: Props) {
           </div>
           <div className="bg-white border-2 mb-4 border-black p-3 rounded-xl shadow-flat w-full m-auto">
             <div className="xl:flex justify-between items-center">
-              <Image className="w-[120px] h-[120px] m-auto md:m-0" width={250} height={250} src="/img/components/valueProposition/value3_img.png" alt="good" />
+              <Image
+                className="w-[120px] h-[120px] m-auto md:m-0"
+                width={250}
+                height={250}
+                src="/img/components/valueProposition/value3_img.png"
+                alt="good"
+              />
               <h3 className="inline-block px-4 py-2 rounded-md text-black">Personalizado</h3>
             </div>
             <div className="rounded-lg p-5 text-white bg-primary flex justify-between items-center">

@@ -1,6 +1,6 @@
-import FooterStandard from '@/components/sections/Footer'
-import FreeText from '@/components/sections/FreeText'
-import PageTitle from '@/components/sections/PageTitle'
+import FooterStandard from '@/components/static/sections/Footer'
+import FreeText from '@/components/static/sections/FreeText'
+import PageTitle from '@/components/static/sections/PageTitle'
 
 type Props = {}
 
