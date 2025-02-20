@@ -90,6 +90,7 @@ export const structure: StructureResolver = S =>
                     .items([
                       S.documentTypeListItem('paragraph').title('Paragraph Simple'),
                       S.documentTypeListItem('paragraphImageRight').title('Paragraph Image Right'),
+                      S.documentTypeListItem('pageTitle').title('Page Title'),
                     ]),
                 ),
               S.listItem()
@@ -109,6 +110,7 @@ export const structure: StructureResolver = S =>
                       S.documentTypeListItem('cardFeature').title('Feature Cards'),
                       S.documentTypeListItem('cardSlider').title('Slider Cards'),
                       S.documentTypeListItem('bigCardLeft').title('Big-Card Left'),
+                      S.documentTypeListItem('cardParagraph').title('Paragraph Card'),
                     ]),
                 ),
             ]),
