@@ -1,4 +1,4 @@
-import NavigatorBroker from '@/components/navigations/broker/NavigatorBroker'
+import NavigatorBroker from '@/components/static/navigations/broker/NavigatorBroker'
 import FooterBroker from '@/components/static/sections/FooterBroker'
 
 type Props = {

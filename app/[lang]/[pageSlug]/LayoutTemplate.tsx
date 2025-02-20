@@ -1,6 +1,6 @@
 import Footer from '@/components/static/sections/Footer'
-import Navigator from '@/components/navigations/retail/Navigator'
-import NavigatorBroker from '@/components/navigations/broker/NavigatorBroker'
+import Navigator from '@/components/static/navigations/retail/Navigator'
+import NavigatorBroker from '@/components/static/navigations/broker/NavigatorBroker'
 import {getPageBySlug} from '@/sanity/sanity-utils'
 import FooterBroker from '@/components/static/sections/FooterBroker'
 
