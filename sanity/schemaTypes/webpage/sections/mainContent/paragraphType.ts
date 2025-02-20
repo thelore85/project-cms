@@ -1,26 +1,21 @@
-// schemas/hero.ts
-export const paragraphType = {
+import {defineType, defineField} from 'sanity'
+
+export const paragraphType = defineType({
   name: 'paragraph',
   type: 'document',
   title: 'Paragraph Simple',
   fields: [
-    {
+    defineField({
       name: 'previewTitle',
       description: 'Use this field for Sanity studio preview',
       type: 'string',
       title: 'Preview Title',
-    },
-    {
-      name: 'title',
-      description: 'Paragraph Title',
-      type: 'string',
-      title: 'Title',
-    },
-    {
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
-      type: 'text',
-    },
+      type: 'blockContent', // Usa il riferimento corretto a blockContent
+    }),
   ],
   preview: {
     select: {
@@ -28,4 +23,4 @@ export const paragraphType = {
       content: 'content',
     },
   },
-}
+})
