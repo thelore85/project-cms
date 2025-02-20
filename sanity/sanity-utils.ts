@@ -69,6 +69,40 @@ export async function getPageBySlug(title: string, lang: string) {
         sections[] -> {
           _type,
 
+
+
+      
+
+          ///////////////////////////////////////////////
+          //// INTERACTIVE
+          ///////////////////////////////////////////////
+
+
+          // Campi specifici per 'Logo Strip'
+          _type == "logoStrip" => {
+            "title": title,
+            "logos": partnersLogo[] {
+              "image": image.asset->url
+            }
+          },
+
+
+          // Campi specifici per 'FAQ'
+          _type == "faq" => {
+            "title": title,
+             "cards": faqCards[] {
+              "content": content,
+              "title": title
+            }
+          },
+
+
+
+
+          ///////////////////////////////////////////////
+          //// HERO
+          ///////////////////////////////////////////////
+
           // Campi specifici per 'hero'
           _type == "hero" => {
             "image": image.asset->url,
@@ -92,6 +126,50 @@ export async function getPageBySlug(title: string, lang: string) {
             "subtitle": subtitle,
           },
 
+
+
+
+
+          ///////////////////////////////////////////////
+          //// CARDS
+          ///////////////////////////////////////////////
+
+          // Campi specifici per 'cardParagraph'
+          _type == "cardParagraph" => {
+            "content": content,
+          },
+
+
+          // Campi specifici per 'bigCardLeft'
+          _type == "bigCardLeft" => {
+            "image": image.asset->url,
+            "title": title,
+            "subtitle": subtitle,
+            "content": content,
+          },
+
+
+          // Campi specifici per 'Card Feature'
+          _type == "cardFeature" => {
+            "title": sectionTitle,
+            "cards": cardFeature[] {
+              "title": title,
+              "description": description,
+              "image": image.asset->url
+            }
+          },
+
+
+          // Campi specifici per 'Card Slider'
+          _type == "cardSlider" => {
+            "title": title,
+             "cards": cardSlider[] {
+              "description": description,
+              "image": image.asset->url
+            }
+          },
+
+
           // Campi specifici per 'howTo'
           _type == "howTo" => {
             "title": title,
@@ -106,53 +184,13 @@ export async function getPageBySlug(title: string, lang: string) {
             "step3Image": step3.image.asset->url
           },
 
-          // Campi specifici per 'Logo Strip'
-          _type == "logoStrip" => {
-            "title": title,
-            "logos": partnersLogo[] {
-              "image": image.asset->url
-            }
-          },
-
-          // Campi specifici per 'Card Slider'
-          _type == "cardSlider" => {
-            "title": title,
-             "cards": cardSlider[] {
-              "description": description,
-              "image": image.asset->url
-            }
-          },
-
-          // Campi specifici per 'FAQ'
-          _type == "faq" => {
-            "title": title,
-             "cards": faqCards[] {
-              "content": content,
-              "title": title
-            }
-          },
-
-          // Campi specifici per 'Card Feature'
-          _type == "cardFeature" => {
-            "title": sectionTitle,
-            "cards": cardFeature[] {
-              "title": title,
-              "description": description,
-              "image": image.asset->url
-            }
-          },
 
 
-          // Campi specifici per 'bigCardLeft'
-          _type == "bigCardLeft" => {
-            "image": image.asset->url,
-            "title": title,
-            "subtitle": subtitle,
-            "content": content,
-          },
+
 
           ///////////////////////////////////////////////
           //// MAIN CONTENTS
+          ///////////////////////////////////////////////
 
           // Campi specifici per 'paragraph'
           _type == "paragraph" => {
@@ -161,10 +199,16 @@ export async function getPageBySlug(title: string, lang: string) {
           },
           // Campi specifici per 'paragraphImageRight'
           _type == "paragraphImageRight" => {
-            "title": title,
-            "columnLeft": columnLeft,
+            "content": content,
             "image": image.asset->url,
           },
+          // Campi specifici per 'pageTitle'
+          _type == "pageTitle" => {
+            "title": title,
+            "subtitle": subtitle,
+          },
+
+
 
         }
       }`,

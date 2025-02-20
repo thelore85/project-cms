@@ -13,6 +13,8 @@ import HeroBig from '@/components/cms/sections/hero/HeroBig'
 import CardSlider from '@/components/cms/sections/cards/CardSlider'
 import Paragraph from '@/components/cms/sections/mainContents/Paragraph'
 import ParagraphImageRight from '@/components/cms/sections/mainContents/ParagraphImageRight'
+import PageTitle from '@/components/cms/sections/mainContents/PageTitle'
+import CardParagraph from '@/components/cms/sections/cards/CardParagraph'
 
 type PageProps = {
   slug: string
@@ -37,13 +39,15 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     heroBig: HeroBig,
     heroForm: HeroForm,
     cardFeature: CardFeature,
+    cardSlider: CardSlider,
+    bigCardLeft: BigCardLeft,
     howTo: HowTo,
     logoStrip: LogoStrip,
-    cardSlider: CardSlider,
     faq: Faq,
-    bigCardLeft: BigCardLeft,
     paragraph: Paragraph,
     paragraphImageRight: ParagraphImageRight,
+    pageTitle: PageTitle,
+    cardParagraph: CardParagraph,
   }
 
   if (!page || !page.sections) {

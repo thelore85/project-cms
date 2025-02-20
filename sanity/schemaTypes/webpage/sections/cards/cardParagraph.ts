@@ -1,26 +1,25 @@
 import {defineType, defineField} from 'sanity'
 
-export const paragraphType = defineType({
-  name: 'paragraph',
+export const cardParagraphType = defineType({
+  name: 'cardParagraph',
+  title: 'Card Paragraph',
   type: 'document',
-  title: 'Paragraph Simple',
   fields: [
     defineField({
       name: 'previewTitle',
+      title: 'Preview Title',
       description: 'Use this field for Sanity studio preview',
       type: 'string',
-      title: 'Preview Title',
     }),
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'blockContent', // Usa il riferimento corretto a blockContent
+      type: 'blockContent',
     }),
   ],
   preview: {
     select: {
       title: 'previewTitle',
-      content: 'content',
     },
   },
 })

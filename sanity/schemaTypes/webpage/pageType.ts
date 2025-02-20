@@ -84,7 +84,7 @@ export const pageType = {
           type: 'reference',
           title: 'Main Contents',
           fieldset: 'mainContents',
-          to: [{type: 'paragraph'}, {type: 'paragraphImageRight'}],
+          to: [{type: 'paragraph'}, {type: 'paragraphImageRight'}, {type: 'pageTitle'}],
         },
         {
           name: 'interactiveSections',
@@ -98,7 +98,7 @@ export const pageType = {
           type: 'reference',
           title: 'Cards Sections',
           fieldset: 'cards',
-          to: [{type: 'cardSlider'}, {type: 'bigCardLeft'}, {type: 'cardFeature'}, {type: 'howTo'}],
+          to: [{type: 'cardSlider'}, {type: 'bigCardLeft'}, {type: 'cardFeature'}, {type: 'howTo'}, {type: 'cardParagraph'}],
         },
       ],
       fieldsets: [
