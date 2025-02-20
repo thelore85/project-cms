@@ -3,7 +3,7 @@ import React from 'react'
 type Props = {
   section: {
     title: string
-    description: string
+    subtitle: string
   }
 }
 
@@ -12,7 +12,7 @@ export default function PageTitle({section}: Props) {
     <section className="bg-gradient text-primary-foreground mb-16">
       <div className=" container py-20">
         <h1 className="text-6xl font-bold mb-4">{section.title}</h1>
-        <p className="text-xl">{section.description}</p>
+        <p className="text-xl">{section.subtitle}</p>
       </div>
     </section>
   )
