@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CtaMainBroker from '@/components/buttons/CtaMainBroker'
+import CtaMainBroker from '@/components/static/buttons/CtaMainBroker'
 
 type Props = {
   section: any
