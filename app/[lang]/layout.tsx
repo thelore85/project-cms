@@ -19,11 +19,12 @@ const poppins = Poppins({
 
 type Props = {
   children: React.ReactNode
+  params: {lang: string; pageSlug: string}
 }
 
-export default function RootLayout({children}: Props) {
+export default function RootLayout({children, params}: Props) {
   return (
-    <html lang="en" className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
+    <html lang={params.lang} className={`${noticiaText.variable} ${poppins.variable} antialiased`}>
       <body>
         <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
         {/* <ScrollToTop /> */}
