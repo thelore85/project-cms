@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Cta from '@/components/cms/buttons/Cta'
+// import Cta from '@/components/cms/buttons/Cta'
 
 type Props = {
   section: any
@@ -23,7 +23,7 @@ export default function HeroForm({section}: Props) {
               />
               <h1 className="font-bold mb-10 text-primary-foreground text-4xl md:text-5xl">{section.title}</h1>
               <p className="text-3xl text-primary-foreground mb-10 hidden md:block">{section.subtitle}</p>
-              {section.buttonUrl && <Cta urlPath={section.buttonUrl} text={section.buttonLabel} />}
+              {/* {section.buttonUrl && <Cta urlPath={section.buttonUrl} text={section.buttonLabel} />} */}
             </div>
 
             <Image
