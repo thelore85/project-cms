@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import CtaMain from '@/components/static/buttons/CtaMain'
-import FormNewsletter from '@/components/form/FormNewsletter'
+import FormNewsletter from '@/components/static/form/FormNewsletter'
 
 type Props = {}
 
