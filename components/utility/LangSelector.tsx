@@ -12,7 +12,7 @@ export default function LangSelector() {
   // update lang on pathchange for manua input
   useEffect(() => {
     langManager()
-  })
+  }, [])
 
   const langManager = () => {
     const urlLang = currentPathname.split('/')[1]
