@@ -47,8 +47,8 @@ export default function SideNavRetail({lang}: Props) {
               {[
                 {href: `/${lang}/home/#howTo`, label: 'Sobre Nosotros'},
                 {href: `/${lang}/home/#faq`, label: 'FAQ'},
-                // {href: `/${lang}/#testimonials`, label: 'Opiniones'},
                 {href: `/${lang}/home/#footer`, label: 'Contactos'},
+                {href: `/${lang}/blog`, label: 'Blog'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>

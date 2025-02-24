@@ -2,7 +2,6 @@ import {getPageBySlug} from '@/sanity/sanity-utils'
 
 // Components
 import Hero from '@/components/cms/sections/hero/Hero'
-import HeroForm from '@/components/cms/sections/hero/HeroForm'
 import CardFeature from '@/components/cms/sections/cards/CardFeature'
 import Error404 from '@/components/static/sections/Error404'
 import HowTo from '@/components/cms/sections/howToRetail/HowTo'
@@ -38,7 +37,6 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
   const componentMap: compMapProps = {
     hero: Hero,
     heroBig: HeroBig,
-    heroForm: HeroForm,
     cardFeature: CardFeature,
     cardSlider: CardSlider,
     bigCardLeft: BigCardLeft,

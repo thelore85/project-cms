@@ -77,7 +77,7 @@ export const pageType = {
           type: 'reference',
           title: 'Hero Sections',
           fieldset: 'hero',
-          to: [{type: 'hero'}, {type: 'heroForm'}, {type: 'heroBig'}],
+          to: [{type: 'hero'}, {type: 'heroBig'}],
         },
         {
           name: 'mainContents',

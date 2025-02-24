@@ -119,14 +119,6 @@ export async function getPageBySlug(title: string, lang: string) {
             "subtitle": subtitle,
           },
 
-          // Campi specifici per 'hero form'
-          _type == "heroForm" => {
-            "image": image.asset->url,
-            "title": sectionTitle,
-            "subtitle": subtitle,
-          },
-
-
 
           ///////////////////////////////////////////////
           //// INTERACTIVE

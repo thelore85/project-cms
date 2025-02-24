@@ -2,7 +2,7 @@
 export const heroBigType = {
   name: 'heroBig',
   type: 'document',
-  title: 'Hero Form',
+  title: 'Hero Big',
   fields: [
     {
       name: 'image',

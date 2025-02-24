@@ -6,7 +6,6 @@ import {postType} from './blog/postType'
 import {authorType} from './blog/authorType'
 import {pageType} from './webpage/pageType'
 import {heroType} from './webpage/sections/hero/heroType'
-import {heroFormType} from './webpage/sections/hero/heroFormType'
 import {howToType} from './webpage/sections/howToType'
 import {logoStripType} from './webpage/sections/interactive/logoStripType'
 import {cardSliderType} from './webpage/sections/cards/cardSliderType'
@@ -23,7 +22,6 @@ import {tabCardType} from './webpage/sections/interactive/tabCard'
 export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
     heroType,
-    heroFormType,
     heroBigType,
     blockContentType,
     categoryType,
