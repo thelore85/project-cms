@@ -15,9 +15,9 @@ export default function MenuDeskBroker({lang}: Props) {
           <Link href={`/${lang}/broker/#valueProposition`} className="hover:text-primary">
             <span>Sobre Nosotros</span>
           </Link>
-          <Link href={`/${lang}/broker/#testimonials`} className="hover:text-primary">
+          {/* <Link href={`/${lang}/broker/#testimonials`} className="hover:text-primary">
             <span>Opiniones</span>
-          </Link>
+          </Link> */}
           <Link href={`/${lang}/broker/#faq`} className="hover:text-primary">
             <span>Faq</span>
           </Link>
@@ -26,9 +26,9 @@ export default function MenuDeskBroker({lang}: Props) {
           <Link href={`/${lang}/home`} className=" me-6 text-primary hover:text-foreground">
             <span>¿Eres Particular?</span>
           </Link>
-          <Link href={`/${lang}/broker`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
+          {/* <Link href={`/${lang}/broker`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
             <span className="">Iniciar sesión</span>
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </div>

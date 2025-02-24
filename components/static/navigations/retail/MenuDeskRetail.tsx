@@ -17,9 +17,6 @@ export default function MenuDesk({lang}: Props) {
           <Link href={`/${lang}/home/#howTo`} className="hover:text-primary">
             <span>Sobre Nosotros</span>
           </Link>
-          <Link href={`/${lang}/home/#testimonials`} className="hover:text-primary">
-            <span>Opiniones</span>
-          </Link>
           <Link href={`/${lang}/home/#faq`} className="hover:text-primary">
             <span>Faq</span>
           </Link>
@@ -34,9 +31,9 @@ export default function MenuDesk({lang}: Props) {
           <Link href={`/${lang}/broker`} className=" me-6 text-primary hover:text-foreground">
             <span>¿Eres broker?</span>
           </Link>
-          <Link href={`/${lang}/home`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
+          {/* <Link href={`/${lang}/home`} className="px-6 py-1 rounded-full border-2 border-black hover:bg-secondary ">
             <span className="">Iniciar sesión</span>
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </div>

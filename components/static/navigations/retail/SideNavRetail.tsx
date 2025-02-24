@@ -45,10 +45,10 @@ export default function SideNavRetail({lang}: Props) {
           <div className="py-20 flex-grow flex flex-col">
             <ul className="list-none text-3xl font-bold text-primary">
               {[
-                {href: `/${lang}/#howTo`, label: 'Sobre Nosotros'},
-                {href: `/${lang}/#faq`, label: 'FAQ'},
-                {href: `/${lang}/#testimonials`, label: 'Opiniones'},
-                {href: `/${lang}/#footer`, label: 'Contactos'},
+                {href: `/${lang}/home/#howTo`, label: 'Sobre Nosotros'},
+                {href: `/${lang}/home/#faq`, label: 'FAQ'},
+                // {href: `/${lang}/#testimonials`, label: 'Opiniones'},
+                {href: `/${lang}/home/#footer`, label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
                   <Link href={href} className="hover:text-primary" onClick={() => setOpen(false)}>
@@ -61,9 +61,7 @@ export default function SideNavRetail({lang}: Props) {
 
           {/* Footer spostato in basso */}
           <div className="pb-5 text-gray-500">
-            <div className="mb-5">
-              <CtaMain />
-            </div>
+            <div className="mb-5">{/* <CtaMain /> */}</div>
             <CtaBroker />
           </div>
         </div>

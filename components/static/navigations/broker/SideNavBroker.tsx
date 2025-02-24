@@ -47,7 +47,7 @@ export default function SideNavBroker({lang}: Props) {
               {[
                 {href: `/${lang}/broker/#howTo`, label: 'Sobre Nosotros'},
                 {href: `/${lang}/broker/#faq`, label: 'FAQ'},
-                {href: `/${lang}/broker/#testimonials`, label: 'Opiniones'},
+                // {href: `/${lang}/broker/#testimonials`, label: 'Opiniones'},
                 {href: `/${lang}/broker/#footer`, label: 'Contactos'},
               ].map(({href, label}) => (
                 <li key={href} className="mb-5">
@@ -61,9 +61,7 @@ export default function SideNavBroker({lang}: Props) {
 
           {/* Footer spostato in basso */}
           <div className="pb-5 text-gray-500">
-            <div className="mb-5">
-              <CtaMain />
-            </div>
+            <div className="mb-5">{/* <CtaMain /> */}</div>
             <CtaRetail />
           </div>
         </div>
