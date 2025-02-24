@@ -15,6 +15,7 @@ import Paragraph from '@/components/cms/sections/mainContents/Paragraph'
 import ParagraphImageRight from '@/components/cms/sections/mainContents/ParagraphImageRight'
 import PageTitle from '@/components/cms/sections/mainContents/PageTitle'
 import CardParagraph from '@/components/cms/sections/cards/CardParagraph'
+import TabCard from '@/components/cms/sections/interactive/TabCard'
 
 type PageProps = {
   slug: string
@@ -48,6 +49,7 @@ export default async function SinglePageTemplate({slug, lang}: PageProps) {
     paragraphImageRight: ParagraphImageRight,
     pageTitle: PageTitle,
     cardParagraph: CardParagraph,
+    tabCard: TabCard,
   }
 
   if (!page || !page.sections) {

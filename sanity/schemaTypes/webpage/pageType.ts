@@ -91,7 +91,7 @@ export const pageType = {
           type: 'reference',
           title: 'Interactive Sections',
           fieldset: 'interactive',
-          to: [{type: 'faq'}, {type: 'logoStrip'}],
+          to: [{type: 'faq'}, {type: 'logoStrip'}, {type: 'tabCard'}],
         },
         {
           name: 'cardsSections',

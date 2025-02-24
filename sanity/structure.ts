@@ -98,7 +98,11 @@ export const structure: StructureResolver = S =>
                 .child(
                   S.list()
                     .title('Interactive Comps.')
-                    .items([S.documentTypeListItem('logoStrip').title('Logo Strip'), S.documentTypeListItem('faq').title('F.A.Q.')]),
+                    .items([
+                      S.documentTypeListItem('logoStrip').title('Logo Strip'),
+                      S.documentTypeListItem('faq').title('F.A.Q.'),
+                      S.documentTypeListItem('tabCard').title('Tab Card'),
+                    ]),
                 ),
               S.listItem()
                 .title('Cards')

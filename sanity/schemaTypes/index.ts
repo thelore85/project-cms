@@ -18,6 +18,7 @@ import {paragraphType} from './webpage/sections/mainContent/paragraphType'
 import {paragraphImageRight} from './webpage/sections/mainContent/paragraphImageRightType'
 import {pageTitleType} from './webpage/sections/mainContent/pageTitleType'
 import {cardParagraphType} from './webpage/sections/cards/cardParagraph'
+import {tabCardType} from './webpage/sections/interactive/tabCard'
 
 export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
@@ -39,5 +40,6 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     paragraphImageRight,
     pageTitleType,
     cardParagraphType,
+    tabCardType,
   ],
 }

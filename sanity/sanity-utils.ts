@@ -60,6 +60,12 @@ export async function getPost(slug: string) {
 export async function getPageBySlug(title: string, lang: string) {
   return await client.fetch(
     groq`
+
+
+      ///////////////////////////////////////////////
+      //// PAGES
+      ///////////////////////////////////////////////
+
       *[_type == "page" && pageSlug == $title && language == $lang][0]{
         title,
         _createdAt,
@@ -71,31 +77,25 @@ export async function getPageBySlug(title: string, lang: string) {
 
 
 
-      
-
           ///////////////////////////////////////////////
-          //// INTERACTIVE
+          //// MAIN CONTENTS§
           ///////////////////////////////////////////////
 
-
-          // Campi specifici per 'Logo Strip'
-          _type == "logoStrip" => {
+          // Campi specifici per 'paragraph'
+          _type == "paragraph" => {
             "title": title,
-            "logos": partnersLogo[] {
-              "image": image.asset->url
-            }
+            "content": content,
           },
-
-
-          // Campi specifici per 'FAQ'
-          _type == "faq" => {
+          // Campi specifici per 'paragraphImageRight'
+          _type == "paragraphImageRight" => {
+            "content": content,
+            "image": image.asset->url,
+          },
+          // Campi specifici per 'pageTitle'
+          _type == "pageTitle" => {
             "title": title,
-             "cards": faqCards[] {
-              "content": content,
-              "title": title
-            }
+            "subtitle": subtitle,
           },
-
 
 
 
@@ -124,6 +124,41 @@ export async function getPageBySlug(title: string, lang: string) {
             "image": image.asset->url,
             "title": sectionTitle,
             "subtitle": subtitle,
+          },
+
+
+
+          ///////////////////////////////////////////////
+          //// INTERACTIVE
+          ///////////////////////////////////////////////
+
+          // Campi specifici per 'Logo Strip'
+          _type == "logoStrip" => {
+            "title": title,
+            "logos": partnersLogo[] {
+              "image": image.asset->url
+            }
+          },
+
+
+          // Campi specifici per 'FAQ'
+          _type == "faq" => {
+            "title": title,
+             "cards": faqCards[] {
+              "content": content,
+              "title": title
+            }
+          },
+
+                    
+          // Campi specifici per 'Tab Card'
+          _type == "tabCard" => {
+            "title": title,
+            "tabs": tabs[]{
+              "title": title,
+              "content": content,
+              "image": image.asset->url
+            }
           },
 
 
@@ -185,28 +220,6 @@ export async function getPageBySlug(title: string, lang: string) {
           },
 
 
-
-
-
-          ///////////////////////////////////////////////
-          //// MAIN CONTENTS
-          ///////////////////////////////////////////////
-
-          // Campi specifici per 'paragraph'
-          _type == "paragraph" => {
-            "title": title,
-            "content": content,
-          },
-          // Campi specifici per 'paragraphImageRight'
-          _type == "paragraphImageRight" => {
-            "content": content,
-            "image": image.asset->url,
-          },
-          // Campi specifici per 'pageTitle'
-          _type == "pageTitle" => {
-            "title": title,
-            "subtitle": subtitle,
-          },
 
 
 
