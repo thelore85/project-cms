@@ -1,7 +1,10 @@
-import Image from 'next/image'
-
 type Props = {
-  section: any
+  section: {
+    title: string
+    image: string
+    content: string
+    subtitle: string
+  }
 }
 
 export default function BigCardLeft({section}: Props) {
@@ -13,16 +16,13 @@ export default function BigCardLeft({section}: Props) {
         </div>
         <div className="flex justify-center">
           {/* CARD  */}
-          <div className="bg-white border-2 mb-4 border-black p-5 rounded-xl shadow-flat w-full  md:w-5/6 m-auto">
+          <div className="bg-white border-2 mb-4 border-black p-5 rounded-xl shadow-flat w-full m-auto">
             <div className="xl:flex justify-between gap-5">
-              <Image
-                className="w-[300px] h-[300px] border-2 border-black m-auto md:m-0 rounded-lg"
-                width={250}
-                height={250}
-                src={section.image}
-                alt="good"
-              />
-              <div className="p-4 md:p-8">
+              <div
+                className="w-full md:w-4/12 min-h-[400px] rounded-3xl shadow-lg bg-cover bg-center"
+                style={{backgroundImage: `url(${section.image})`}}
+              ></div>
+              <div className="w-full md:w-8/12 p-4 md:p-8">
                 <h3 className="inline-block py-2 rounded-md text-black text-center w-full mb-4 text-4xl font-bold">{section.subtitle}</h3>
                 <p className="text-lg mb-0">{section.content}</p>
               </div>

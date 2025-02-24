@@ -7,7 +7,7 @@ type Props = {
 
 export default function HowToCardsTitleLeft({title}: Props) {
   return (
-    <div className="mb-16 w-auto lg:max-w-[500px] lg:mb-0">
+    <div className="mb-16 w-auto lg:max-w-[500px] lg:mb-0 px-5">
       <h2 className="text-center w-auto font-bold text-5xl">{title}</h2>
     </div>
   )

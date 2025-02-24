@@ -17,7 +17,7 @@ export default function HowToCardsBottomRight({title, imgUrl, description, numbe
         </div>
         <h3 className="block text-center px-10 py-2 rounded-md text-black text-pretty">{title}</h3>
         <div className="absolute top-[200px] right-[-90px] hidden md:block ">
-          {imgUrl && <Image src={imgUrl} alt="photo" className="w-[130px] h-[160px]" width={200} height={200} />}
+          {imgUrl && <Image src={imgUrl} alt="photo" className="w-[130px] h-[80px]" width={200} height={200} />}
         </div>
       </div>
       <div className="rounded-lg py-5 px-8 text-white bg-primary flex justify-between items-center">
